@@ -1,4 +1,4 @@
-[NOT REVISED]
+[NOT REVISED|NOT FINISHED]
 - [ ] Explain about the english
 - [ ] Eplain about my trajectory 
 
