@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* CSS Reset */
+html, body, div, span, p, form, label, h1  {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box; 
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: hsla(0, 0%, 11%, 1);
+    font-family: Inter;
+}
+
+hr {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 800px;
+    /* height: 600px; */
+    background: hsla(215, 28%, 17%, 1);
+    padding: 52px;
+}
+
+h1 {
+    font-family: karla;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 10px;
+    color: hsla(255, 5%, 84%, 1);
+}
+
+.text-green {
+    color: hsla(160, 84%, 39%, 1);
+}
+
+.options {
+    margin-top: 35px;
+}
+
+.form-control {
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: #FFF;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: hsla(160, 84%, 39%, 1);;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.form-control + .form-control {
+    margin-top: 1em;
+}
+
+.length-label {
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+    /* font-weight: bold; */
+    color: #FFF;
+    line-height: 2;
+    display: flex;
+    /* grid-template-columns: 1em auto; */
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.input-length {
+    width: 80px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn {
+    font-size: 20px;
+    background: hsla(160, 84%, 39%, 1);
+    border: none;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 35px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hr {
+    display: block;
+    margin: 35px auto;
+    width: 100%;
+    border: 1px solid hsla(215, 28%, 25%, 1)
+}
+
+.password {
+    border: none;
+    padding: 20px;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    background: hsla(215, 30%, 22%, 1);
+    border-radius: 3px;
+}

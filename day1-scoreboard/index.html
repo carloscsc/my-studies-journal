@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="home col">
+            <h2 class="board-title-home">HOME</h2>
+
+            <div class="home-score" id="home-points">0</div>
+
+            <div class="plus-container" id="plus-home">
+                <div class="plus-point" data-increase="1">+1</div>
+                <div class="plus-point" data-increase="2">+2</div>
+                <div class="plus-point" data-increase="3">+3</div>
+            </div>
+        </div>
+
+        <div class="guests col">
+            <h2 class="board-title-home">GUEST</h2>
+
+            <div class="home-score" id="guest-points">0</div>
+
+            <div class="plus-container" id="plus-guest">
+                <div class="plus-point" data-increase="1">+1</div>
+                <div class="plus-point" data-increase="2">+2</div>
+                <div class="plus-point" data-increase="3">+3</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
