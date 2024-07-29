@@ -18,13 +18,12 @@ When a project is in progress, a `[NOT FINISHED]` tag will be added to the top o
 
 If you want to know more about me and my studies, I intend to share my journey so far in the [day0-hello-world/README.md](./day0-hello-world/README.md) file.
 
-
 # Project Index
 
-- [Day 0: Hello, World!](./day0-hello-world/README.md) A brief introduction about me.
+- [Day 0: Hello World!](./day0-hello-world/README.md) A brief introduction about me.
 
 - [Day 1: Scoreboard [repo]](./day1-scoreboard/README.md) [[see in action]](https://my-study-journal.vercel.app/day1-scoreboard) A simple scoreboard using Vanilla JS, created to study the DOM element and some basic JS concepts.
 
-- [Day 2: Password Generator [repo]](./day2-password-generator/README.md) [[see in action]](https://my-study-journal.vercel.app/day2-password-generator) A simple password generator using Vanilla JS, created to study the basics of arrays and the DOM.
+- [Day 2: Password Generator [repo]](./day2-password-generator/README.md) [[see in action]](https://my-study-journal.vercel.app/day2-password-generator): A simple password generator using Vanilla JS, created to study the basics of arrays, functions, random numbers, and DOM manipulation.
 
-- [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) [[see in action]](https://my-study-journal.vercel.app/day3-unit-converter) *[NOT FINISHED]* An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.
+- [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) [[see in action]](https://my-study-journal.vercel.app/day3-unit-converter) _[NOT FINISHED]_ An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.

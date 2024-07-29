@@ -1,3 +1,5 @@
+# Day 3: Unit Converter
+
 ## Things I studed for this project
 
 Studies projects, drafts, etc.. are localized on [\_studies](./_studies) folder
