@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/day2-password-generator/:path*", "destination": "/day2-password-generator/:path*" },
+    { "source": "/day3-unit-converter/_studies/tic-tac-toe/dist/:path*", "destination": "/day3-unit-converter/_studies/tic-tac-toe/dist/:path*" }
   ]
 }
