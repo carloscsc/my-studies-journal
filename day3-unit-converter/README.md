@@ -18,5 +18,5 @@ Studies projects, drafts, etc.. are localized on [\_studies](./_studies) folder
 ### Docs
 
 - [React.dev/Learn](https://react.dev/learn)
-- [React.dev/Learn/Tutorial: Tic-Tac-Toe](https://react.dev/learn/tutorial-tic-tac-toe) (#see [Tic-Tac-Toe Folder](./_studies/tic-tac-toe))
+- [React.dev/Learn/Tutorial: Tic-Tac-Toe](https://react.dev/learn/tutorial-tic-tac-toe) (#see [Tic-Tac-Toe [repo]](./_studies/tic-tac-toe)[[see in action]](https://my-study-journal.vercel.app/day3-unit-converter/_studies/tic-tac-toe/dist))
 - [Typechecking With PropTypes](https://legacy.reactjs.org/docs/typechecking-with-proptypes.html)
