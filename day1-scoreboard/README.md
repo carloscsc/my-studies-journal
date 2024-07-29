@@ -1,33 +1,33 @@
-[NOT REVISED|NOT FINISHED]
-- [ ] Explain about the english 
-
-# Day 1: Scoreboard 
+# Day 1: Scoreboard
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-Like I said in The Day 0, I decided to start studying like I not knew anything, 
-from scratch, for that I decide to take a course about JavaScript really for beginners. This is the first DIY from the course.
+[[SEE IN ACTION]](https://my-study-journal.vercel.app/day1-scoreboard)
 
-This project is part of the course Learn JavaScript available on [Scrimba](https://v2.scrimba.com/) And the idea was creating a scoreboard that get increased when click in the buttons. A really simple way to learn about JS Events and basic functions.
+This project is part of the "Learn JavaScript" course available on [Scrimba](https://v2.scrimba.com/). The objective was to create a scoreboard that increases the score when buttons are clicked, providing a simple way to learn about JavaScript events and basic functions.
 
-In my point of view that project was interesting because they provided to us only a figma file with the specs and, we were encouraged to build from scratch.
+From my perspective, this project was interesting because we were provided only with a Figma file containing the specifications, encouraging us to build everything from scratch.
 
-Form me that already have a bit of experience, this was not really charllenge and I use a lot of thing that was not viewed in that step of the course, and they encourage that kind of attitude.  
+For someone like me, who already has some experience, this wasn't particularly challenging. I utilized several techniques not covered at this stage of the course, and the instructors encouraged this kind of initiative.
 
-So for exemple in the original project, the Idea was mixing HTML and JS, something that is note profitable in a real project, but is very acepptable to introduce someone to the basics concepts. But in my version of the project I decided to apply the good pratices.  
+For example, in the original project, the idea was to mix HTML and JavaScript, which is not ideal for real projects but is acceptable for introducing basic concepts. In my version of the project, I decided to apply best practices.
 
-Other point, is that in class, they don't use ```dataset``` to dynamic pass the score to JS and all the buttons haved their ow functions, again, to introduce the basis, this is ok, but, prefered do something more cleaner, then I change these parts. 
+Another point is that in the class, they did not use `dataset` to dynamically pass the score to JavaScript, and each button had its own function, like this:
 
-Other important point, is that, like this project is only for the purpose to learn Javascript, these page are not responsible. The course even talk about this topic yet. And how me focus is on JS and in the future Backend, I don't see any reason to add the feature even thought I know how. 
+```html
+<div class="plus-point" onclick="increaseScore(1)">+1</div>
+<div class="plus-point" onclick="increaseScore(2)">+2</div>
+<div class="plus-point" onclick="increaseScore(4)">+3</div>
+```
 
-In general, for someone that are really in Day 1 I think this is very helpful to build skills.
+While this approach is okay for teaching the basics, I preferred a cleaner solution and made adjustments accordingly.
 
-I pass the last 12 year build or working with some really scare and ugly things, projects
-in real world that take off you sleep. So, return to the bases and build something really 
-simple like this, made me get some happy for today! 
+Another important point is that, since this project is solely for learning JavaScript, the page is not responsive. The course hasn’t covered this topic yet. As my focus is on JavaScript and, in the future, Backend development, I didn’t see the need to add this feature, even though I know how to do it.
 
-This is was a great Day 1!
+In general, for someone who is truly on Day 1, this project is very helpful for building skills.
 
+I’ve spent the last 10 years building or working on some really scary and complex projects that often took away my sleep. So, returning to the basics and building something simple like this made me feel happy today!
 
+This was a great Day 1!
