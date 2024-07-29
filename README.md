@@ -12,7 +12,7 @@ Each "Day" represents a project, a starting point for executing an idea, which m
 
 Since the primary goal here is to document my studies and projects, each main folder contains a `README.md` file with an explanation of the project and its technologies, documentation when necessary, a link to the project running in production, and a list of articles, courses, and tutorials used during the project with their respective repositories in the `_studies` folder, when applicable.
 
-When a project is in progress, a `_[IN PROGRESS]_ ` tag will be added to the top of the `README.md` file to indicate that the project is not yet completed.
+When a project is in progress, a `[IN PROGRESS]` tag will be added to the top of the `README.md` file to indicate that the project is not yet completed.
 
 ## About Me
 
