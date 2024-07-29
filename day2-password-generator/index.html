@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
 
-    <link rel="stylesheet" href="/day2-password-generator/style.css">
-</head>
-<body> 
-    
+    <link rel="stylesheet" href="/day2-password-generator/style.css" />
+  </head>
+  <body>
     <div class="container">
+      <div class="main">
+        <header>
+          <h1 class="title">
+            Generate a <br /><span class="text-green">random password</span>
+          </h1>
+          <p class="text">Never use an insecure password again.</p>
+        </header>
 
-        <div class="main">
+        <form action="#" id="password-options">
+          <div class="options">
+            <label for="tiny" class="form-control">
+              <input
+                type="checkbox"
+                name="tiny"
+                id="tiny"
+                value="true"
+                checked
+              />
+              Tiny Letters
+            </label>
 
-            <header>
-                <h1 class="title">Generate a <br><span class="text-green">random password</span></h1>
-                <p class="text">Never use an insecure password again.</p>
-            </header>
+            <label for="capital" class="form-control">
+              <input
+                type="checkbox"
+                name="capital"
+                id="capital"
+                value="true"
+                checked
+              />
+              Capital Letters
+            </label>
 
-            <form action="#" id="password-options">
-                
-                <div class="options">
-                    <label for="tiny" class="form-control">
-                        <input type="checkbox" name="tiny" id="tiny" value="true" checked>
-                        Tiny Letters
-                    </label>
-    
-                    <label for="capital" class="form-control">
-                        <input type="checkbox" name="capital" id="capital" value="true" checked>
-                        Capital Letters
-                    </label>
-    
-                    <label for="numbers" class="form-control">
-                        <input type="checkbox" name="numbers" id="numbers" value="true" checked>
-                        Numbers Letters
-                    </label>
-    
-                    <label for="special" class="form-control">
-                        <input type="checkbox" name="special" id="special" value="true">
-                        Special Letters
-                    </label>
-    
-                    <label for="size" class="length-label">
-                        <input class="input-length" type="number" name="size" id="size" min="6" max="30" value="6">
-                        Length
-                    </label>
-                </div>
-                
-                <button class="btn" id="generate-btn" type="submit">Generate password</button>
-            </form>
+            <label for="numbers" class="form-control">
+              <input
+                type="checkbox"
+                name="numbers"
+                id="numbers"
+                value="true"
+                checked
+              />
+              Numbers Letters
+            </label>
 
-           
-            <span class="hr"><hr></span>
+            <label for="special" class="form-control">
+              <input type="checkbox" name="special" id="special" value="true" />
+              Special Letters
+            </label>
 
-            <div class="fields">
-                <input type="text" id="field-el" class="password text-green">
-            </div>
+            <label for="size" class="length-label">
+              <input
+                class="input-length"
+                type="number"
+                name="size"
+                id="size"
+                min="6"
+                max="30"
+                value="6"
+              />
+              Length
+            </label>
+          </div>
+
+          <button class="btn" id="generate-btn" type="submit">
+            Generate password
+          </button>
+        </form>
+
+        <span class="hr"><hr /></span>
+
+        <div class="fields">
+          <input type="text" id="field-el" class="password text-green" />
         </div>
-
+      </div>
     </div>
-    
+
     <script src="/day2-password-generator/app.js"></script>
-</body>
+  </body>
 </html>
