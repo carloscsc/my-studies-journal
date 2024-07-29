@@ -14,6 +14,10 @@ The initial project was very simple and required the app to return a basic numer
 
 I decided to add some extra features, such as the ability to choose the password length and whether it should contain special characters, letters, and/or numbers. This made the project more challenging and useful.
 
+This is the result
+
+![My Project](assets/my-project.png)
+
 This project was particularly interesting for learning and practicing specific JavaScript functionalities such as arrays, objects, loops, functions, DOM manipulation, and random number generation.
 
 As this project is very basic and recommended for beginners, I made sure to create extensive documentation to help those who are just starting to study JavaScript.
