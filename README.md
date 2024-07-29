@@ -26,4 +26,4 @@ If you want to know more about me and my studies, I intend to share my journey s
 
 - [Day 2: Password Generator [repo]](./day2-password-generator/README.md) [[see in action]](https://my-study-journal.vercel.app/day2-password-generator): A simple password generator using Vanilla JS, created to study the basics of arrays, functions, random numbers, and DOM manipulation.
 
-- [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) [[see in action]](https://my-study-journal.vercel.app/day3-unit-converter) _[NOT FINISHED]_ An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.
+- [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) _[NOT FINISHED]_ An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.
