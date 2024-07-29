@@ -12,7 +12,7 @@ Each "Day" represents a project, a starting point for executing an idea, which m
 
 Since the primary goal here is to document my studies and projects, each main folder contains a `README.md` file with an explanation of the project and its technologies, documentation when necessary, a link to the project running in production, and a list of articles, courses, and tutorials used during the project with their respective repositories in the `_studies` folder, when applicable.
 
-When a project is in progress, a `[NOT FINISHED]` tag will be added to the top of the `README.md` file to indicate that the project is not yet completed.
+When a project is in progress, a `[IN PROGRESS]` tag will be added to the top of the `README.md` file to indicate that the project is not yet completed.
 
 ## About Me
 
@@ -26,4 +26,4 @@ If you want to know more about me and my studies, I intend to share my journey s
 
 - [Day 2: Password Generator [repo]](./day2-password-generator/README.md) [[see in action]](https://my-study-journal.vercel.app/day2-password-generator): A simple password generator using Vanilla JS, created to study the basics of arrays, functions, random numbers, and DOM manipulation.
 
-- [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) _[NOT FINISHED]_ An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.
+- [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) _[IN PROGRESS]_ An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.
