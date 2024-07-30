@@ -27,3 +27,7 @@ If you want to know more about me and my studies, I intend to share my journey s
 - [Day 2: Password Generator [repo]](./day2-password-generator/README.md) [[see in action]](https://my-study-journal.vercel.app/day2-password-generator): A simple password generator using Vanilla JS, created to study the basics of arrays, functions, random numbers, and DOM manipulation.
 
 - [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) _[IN PROGRESS]_ An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.
+
+## Other study materials and interesting articles:
+
+- [Resolving conflicts between .env and Vite](https://dev.to/boostup/uncaught-referenceerror-process-is-not-defined-12kg) I am very grateful to [Fred B.](https://github.com/boostup), the author of the article, as the material in question helped me a lot in solving the problems I was facing when trying to use DotEnv with Vite.
