@@ -28,4 +28,4 @@ If you want to know more about me and my studies, I intend to share my journey s
 
 - [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) _[IN PROGRESS]_ An app made in React to convert units. Inspired by the functionalities of Google when searching for unit conversions.
 
-## Other study materials and interesting articles:
+## Aside: Other study materials and interesting articles
