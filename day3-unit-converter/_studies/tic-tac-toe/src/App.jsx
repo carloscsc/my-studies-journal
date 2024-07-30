@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Square from "./Square.jsx";
-import { array } from "prop-types";
 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
