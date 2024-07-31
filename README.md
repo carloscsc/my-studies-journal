@@ -1,6 +1,3 @@
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
 - [About the Project](#about-the-project)
 - [Repository Structure](#repository-structure)
 - [Miscellaneous](#miscellaneous)
