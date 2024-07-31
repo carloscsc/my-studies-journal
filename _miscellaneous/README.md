@@ -12,3 +12,4 @@
 
 - [(DOC) Renaming a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)
 - ["Dropdowns" in Markdown](https://gist.github.com/citrusui/07978f14b11adada364ff901e27c7f61) - I was going to try to organize this document into sections, but in the end, I found it less intuitive than creating a structure with titles and subtitles. However, I left the reference because I found it interesting.
+- [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
