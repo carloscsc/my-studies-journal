@@ -1,22 +1,8 @@
-_[IN PROGRESS]_
+# React + Vite
 
-# Day 3: Unit Converter
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Things I studed for this project
+Currently, two official plugins are available:
 
-Studies projects, drafts, etc.. are localized on [\_studies](./_studies) folder
-
-### Courses
-
-- [Learn JavaScript - Scrimba](https://v2.scrimba.com/learn-javascript-c0v)
-
-### Tutorials
-
-- [React Full Course for free ⚛️ (2024)](https://www.youtube.com/watch?v=CgkZ7MvWUAA&t=5905s&ab_channel=BroCode)
-- [Adding ESLint and Prettier to a ViteJS React project](https://stackademic.com/blog/adding-eslint-and-prettier-to-a-vitejs-react-project)
-
-### Docs
-
-- [React.dev/Learn](https://react.dev/learn)
-- [React.dev/Learn/Tutorial: Tic-Tac-Toe](https://react.dev/learn/tutorial-tic-tac-toe) (#see [Tic-Tac-Toe [repo]](./_studies/tic-tac-toe)[[see in action]](https://my-study-journal.vercel.app/day3-unit-converter/_studies/tic-tac-toe/dist))
-- [Typechecking With PropTypes](https://legacy.reactjs.org/docs/typechecking-with-proptypes.html)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
