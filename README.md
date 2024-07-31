@@ -60,7 +60,7 @@ To do this, just follow the instructions below:
    git checkout
    ```
 
-After finishing, only the selected folder will be cloned. However, the structure leading to it will be maintained, along with some secondary files. You can ignore this and move only the folder of your interest to another location on your computer.
+After finishing, only the selected folder will be cloned. However, the structure leading to it will be maintained, along with some secondary files. You can ignore this and move only the folder of interest to another location on your computer.
 
 ## Project Index
 
