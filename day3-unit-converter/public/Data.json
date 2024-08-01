@@ -9,7 +9,9 @@
             "centimeter (cm)": 100,
             "millimeter (mm)": 1000,
             "kilometer (km)": 0.001,
-            "inch (in)": 39.3701
+            "inch (in)": 39.3701,
+            "foot (ft)": 3.28084,
+            "mile (mi)": 0.000621371
           }
         },
         {
@@ -18,7 +20,9 @@
             "meter (m)": 0.01,
             "millimeter (mm)": 10,
             "kilometer (km)": 0.00001,
-            "inch (in)": 0.393701
+            "inch (in)": 0.393701,
+            "foot (ft)": 0.0328084,
+            "mile (mi)": 0.0000062137
           }
         },
         {
@@ -27,7 +31,9 @@
             "meter (m)": 0.001,
             "centimeter (cm)": 0.1,
             "kilometer (km)": 0.000001,
-            "inch (in)": 0.0393701
+            "inch (in)": 0.0393701,
+            "foot (ft)": 0.00328084,
+            "mile (mi)": 0.000000621371
           }
         },
         {
@@ -36,7 +42,9 @@
             "meter (m)": 1000,
             "centimeter (cm)": 100000,
             "millimeter (mm)": 1000000,
-            "inch (in)": 39370.1
+            "inch (in)": 39370.1,
+            "foot (ft)": 3280.84,
+            "mile (mi)": 0.621371
           }
         },
         {
@@ -45,7 +53,31 @@
             "meter (m)": 0.0254,
             "centimeter (cm)": 2.54,
             "millimeter (mm)": 25.4,
-            "kilometer (km)": 0.0000254
+            "kilometer (km)": 0.0000254,
+            "foot (ft)": 0.0833333,
+            "mile (mi)": 0.0000157828
+          }
+        },
+        {
+          "name": "foot (ft)",
+          "conversions": {
+            "meter (m)": 0.3048,
+            "centimeter (cm)": 30.48,
+            "millimeter (mm)": 304.8,
+            "kilometer (km)": 0.0003048,
+            "inch (in)": 12,
+            "mile (mi)": 0.000189394
+          }
+        },
+        {
+          "name": "mile (mi)",
+          "conversions": {
+            "meter (m)": 1609.34,
+            "centimeter (cm)": 160934,
+            "millimeter (mm)": 1609340,
+            "kilometer (km)": 1.60934,
+            "inch (in)": 63360,
+            "foot (ft)": 5280
           }
         }
       ]
@@ -146,32 +178,6 @@
             "gram (g)": 453.592,
             "milligram (mg)": 453592,
             "ton (t)": 0.000453592
-          }
-        }
-      ]
-    },
-    {
-      "type": "Temperature 🌡️",
-      "units": [
-        {
-          "name": "Celsius (°C)",
-          "conversions": {
-            "Fahrenheit (°F)": "°C * 9/5 + 32",
-            "Kelvin (K)": "°C + 273.15"
-          }
-        },
-        {
-          "name": "Fahrenheit (°F)",
-          "conversions": {
-            "Celsius (°C)": "(°F - 32) * 5/9",
-            "Kelvin (K)": "(°F - 32) * 5/9 + 273.15"
-          }
-        },
-        {
-          "name": "Kelvin (K)",
-          "conversions": {
-            "Celsius (°C)": "K - 273.15",
-            "Fahrenheit (°F)": "(K - 273.15) * 9/5 + 32"
           }
         }
       ]

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function MeasureTypesSelector({ types, setType }) {
   function handleChange(e) {
     setType(types[e.target.value]);

@@ -1,38 +1,26 @@
-export default function UnitSelector({ setUnitC, unitsToConvert, setUnitT, targetsUnit }) {
-  const handleChangeConverter = (e) => {
-    // console.log(e);
-  };
-
-  const handleChangeTarget = (e) => {
-    console.log(e);
+export default function UnitSelector({ units, setUnit, selected }) {
+  const handleChange = (e) => {
+    const selectedOptionIndex = e.target.selectedIndex;
+    setUnit(units[selectedOptionIndex]);
   };
 
   return (
     <>
       <div className="converter-selector">
-        <label htmlFor="converter">Converter</label>
-        <select id="converter" name="converter" onChange={handleChangeConverter}>
-          {unitsToConvert &&
-            unitsToConvert.map((unit, i) => {
+        <select id="converter" name="converter" onChange={handleChange} value={selected}>
+          {units &&
+            units.map((unit, i) => {
               return (
-                <option key={i} value={i}>
-                  {unit.name}
+                <option
+                  key={i}
+                  data-unit={JSON.stringify(unit)}
+                  value={unit.name ?? unit[0]}
+                  label={unit.name ?? unit[0]}
+                >
+                  {unit.name ?? unit[0]}
                 </option>
               );
             })}
-        </select>
-      </div>
-
-      <div className="target-slector">
-        <label htmlFor="target">Target</label>
-        <select id="target" name="target" onChange={handleChangeTarget}>
-          {targetsUnit.map((taregt, i) => {
-            return (
-              <option key={i} value={i}>
-                {taregt[0]}
-              </option>
-            );
-          })}
         </select>
       </div>
     </>

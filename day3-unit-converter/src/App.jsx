@@ -3,8 +3,6 @@ import MeasureTypesSelector from "./MeasureTypesSelector.jsx";
 import UnitSelector from "./UnitSelector.jsx";
 
 function App() {
-  const [selectedTypeIndex, setSelectedTypeIndex] = useState(0);
-
   const [measureTypes, setMeasureTypes] = useState([]);
   const [selectedType, setSelectedType] = useState([]);
 
@@ -36,42 +34,42 @@ function App() {
         // set initial value to selectedUnitToTarget
         setSelectedUnitToTarget(Object.entries(data.measureTypes[0].units[0].conversions)[0]);
       })
+      // eslint-disable-next-line no-console
       .catch((error) => console.error("Error fetching the measure types:", error));
   }, []);
 
   // chage the units every time that data change
   useEffect(() => {
-    setUnitsToConvert(selectedType.units);
-
     if (selectedType.units) {
+      setUnitsToConvert(selectedType.units);
+      setUnitsToTarget(Object.entries(selectedType.units[0].conversions));
       setSelectedUnitToConvert(selectedType.units[0]);
+      setSelectedUnitToTarget(Object.entries(selectedType.units[0].conversions)[0]);
     }
   }, [selectedType]);
 
   useEffect(() => {
     if (selectedUnitToConvert.conversions) {
       setUnitsToTarget(Object.entries(selectedUnitToConvert.conversions));
+      setSelectedUnitToTarget(Object.entries(selectedUnitToConvert.conversions)[0]);
     }
   }, [selectedUnitToConvert]);
 
-  useEffect(() => {
-    if (selectedUnitToTarget) {
-      setSelectedUnitToTarget(unitsToTarget[0]);
-    }
-  }, [unitsToTarget]);
-
-  useEffect(() => {
-    console.log(selectedUnitToConvert, selectedUnitToTarget);
-  }, [selectedUnitToTarget]);
+  // resultado no console
+  console.log(1 * selectedUnitToTarget[1]);
 
   return (
     <>
       <MeasureTypesSelector setType={setSelectedType} types={measureTypes} />
       <UnitSelector
-        setUnitC={setSelectedUnitToConvert}
-        unitsToConvert={unitsToConvert}
-        setUnitT={setUnitsToTarget}
-        targetsUnit={unitsToTarget}
+        units={unitsToConvert}
+        setUnit={setSelectedUnitToConvert}
+        selected={selectedUnitToConvert && selectedUnitToConvert.name}
+      />
+      <UnitSelector
+        units={unitsToTarget}
+        setUnit={setSelectedUnitToTarget}
+        selected={selectedUnitToTarget && selectedUnitToTarget[0]}
       />
     </>
   );
