@@ -12,27 +12,15 @@ function App() {
   const [unitsToTarget, setUnitsToTarget] = useState([]);
   const [selectedUnitToTarget, setSelectedUnitToTarget] = useState([]);
 
+  const [inputConverter, setInputConverter] = useState(1);
+  const [inputTarget, setInputTarget] = useState(0);
+
   useEffect(() => {
     fetch("/Data.json")
       .then((response) => response.json())
       .then((data) => {
-        // get data from json and set to measureTypes
         setMeasureTypes(data.measureTypes);
-
-        // set initial data for selectedType
         setSelectedType(data.measureTypes[0]);
-
-        // set initial value to unitsToConvert
-        setUnitsToConvert(data.measureTypes[0].units);
-
-        // set inital value to selectedUnitToConvert
-        setSelectedUnitToConvert(data.measureTypes[0].units[0]);
-
-        // set initial value to unitsToTarget
-        setUnitsToTarget(Object.entries(data.measureTypes[0].units[0].conversions));
-
-        // set initial value to selectedUnitToTarget
-        setSelectedUnitToTarget(Object.entries(data.measureTypes[0].units[0].conversions)[0]);
       })
       // eslint-disable-next-line no-console
       .catch((error) => console.error("Error fetching the measure types:", error));
@@ -45,6 +33,8 @@ function App() {
       setUnitsToTarget(Object.entries(selectedType.units[0].conversions));
       setSelectedUnitToConvert(selectedType.units[0]);
       setSelectedUnitToTarget(Object.entries(selectedType.units[0].conversions)[0]);
+
+      setInputTarget(inputConverter * Object.entries(selectedType.units[0].conversions)[0][1]);
     }
   }, [selectedType]);
 
@@ -52,20 +42,45 @@ function App() {
     if (selectedUnitToConvert.conversions) {
       setUnitsToTarget(Object.entries(selectedUnitToConvert.conversions));
       setSelectedUnitToTarget(Object.entries(selectedUnitToConvert.conversions)[0]);
+      setInputTarget(inputConverter * Object.entries(selectedUnitToConvert.conversions)[0][1]);
     }
   }, [selectedUnitToConvert]);
 
-  // resultado no console
-  console.log(1 * selectedUnitToTarget[1]);
+  useEffect(() => {
+    if (selectedUnitToTarget[1]) {
+      setInputTarget(inputConverter * selectedUnitToTarget[1]);
+    } else {
+      setInputTarget(0);
+    }
+  }, [selectedUnitToTarget]);
+
+  function setValue(e) {
+    setInputConverter(e.target.value);
+    setInputTarget(e.target.value * selectedUnitToTarget[1]);
+  }
 
   return (
     <>
       <MeasureTypesSelector setType={setSelectedType} types={measureTypes} />
+
+      <input
+        type="number"
+        className="input-converter"
+        min={1}
+        value={inputConverter}
+        onChange={setValue}
+      />
+
       <UnitSelector
         units={unitsToConvert}
         setUnit={setSelectedUnitToConvert}
         selected={selectedUnitToConvert && selectedUnitToConvert.name}
       />
+
+      <span> = </span>
+
+      <input type="text" className="input-target" value={inputTarget} readOnly />
+
       <UnitSelector
         units={unitsToTarget}
         setUnit={setSelectedUnitToTarget}

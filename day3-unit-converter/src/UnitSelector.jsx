@@ -6,23 +6,21 @@ export default function UnitSelector({ units, setUnit, selected }) {
 
   return (
     <>
-      <div className="converter-selector">
-        <select id="converter" name="converter" onChange={handleChange} value={selected}>
-          {units &&
-            units.map((unit, i) => {
-              return (
-                <option
-                  key={i}
-                  data-unit={JSON.stringify(unit)}
-                  value={unit.name ?? unit[0]}
-                  label={unit.name ?? unit[0]}
-                >
-                  {unit.name ?? unit[0]}
-                </option>
-              );
-            })}
-        </select>
-      </div>
+      <select onChange={handleChange} value={selected}>
+        {units &&
+          units.map((unit, i) => {
+            return (
+              <option
+                key={i}
+                data-unit={JSON.stringify(unit)}
+                value={unit.name ?? unit[0]}
+                label={unit.name ?? unit[0]}
+              >
+                {unit.name ?? unit[0]}
+              </option>
+            );
+          })}
+      </select>
     </>
   );
 }
