@@ -1,0 +1,230 @@
+{
+  "measureTypes": [
+    {
+      "type": "Length 📏",
+      "units": [
+        {
+          "name": "meter (m)",
+          "conversions": {
+            "centimeter (cm)": 100,
+            "millimeter (mm)": 1000,
+            "kilometer (km)": 0.001,
+            "inch (in)": 39.3701
+          }
+        },
+        {
+          "name": "centimeter (cm)",
+          "conversions": {
+            "meter (m)": 0.01,
+            "millimeter (mm)": 10,
+            "kilometer (km)": 0.00001,
+            "inch (in)": 0.393701
+          }
+        },
+        {
+          "name": "millimeter (mm)",
+          "conversions": {
+            "meter (m)": 0.001,
+            "centimeter (cm)": 0.1,
+            "kilometer (km)": 0.000001,
+            "inch (in)": 0.0393701
+          }
+        },
+        {
+          "name": "kilometer (km)",
+          "conversions": {
+            "meter (m)": 1000,
+            "centimeter (cm)": 100000,
+            "millimeter (mm)": 1000000,
+            "inch (in)": 39370.1
+          }
+        },
+        {
+          "name": "inch (in)",
+          "conversions": {
+            "meter (m)": 0.0254,
+            "centimeter (cm)": 2.54,
+            "millimeter (mm)": 25.4,
+            "kilometer (km)": 0.0000254
+          }
+        }
+      ]
+    },
+    {
+      "type": "Speed 🚀",
+      "units": [
+        {
+          "name": "meters per second (m/s)",
+          "conversions": {
+            "kilometers per hour (km/h)": 3.6,
+            "miles per hour (mph)": 2.23694,
+            "feet per second (ft/s)": 3.28084,
+            "knots (kt)": 1.94384
+          }
+        },
+        {
+          "name": "kilometers per hour (km/h)",
+          "conversions": {
+            "meters per second (m/s)": 0.277778,
+            "miles per hour (mph)": 0.621371,
+            "feet per second (ft/s)": 0.911344,
+            "knots (kt)": 0.539957
+          }
+        },
+        {
+          "name": "miles per hour (mph)",
+          "conversions": {
+            "meters per second (m/s)": 0.44704,
+            "kilometers per hour (km/h)": 1.60934,
+            "feet per second (ft/s)": 1.46667,
+            "knots (kt)": 0.868976
+          }
+        },
+        {
+          "name": "feet per second (ft/s)",
+          "conversions": {
+            "meters per second (m/s)": 0.3048,
+            "kilometers per hour (km/h)": 1.09728,
+            "miles per hour (mph)": 0.681818,
+            "knots (kt)": 0.592484
+          }
+        },
+        {
+          "name": "knots (kt)",
+          "conversions": {
+            "meters per second (m/s)": 0.514444,
+            "kilometers per hour (km/h)": 1.852,
+            "miles per hour (mph)": 1.15078,
+            "feet per second (ft/s)": 1.68781
+          }
+        }
+      ]
+    },
+    {
+      "type": "Weight ⚖️",
+      "units": [
+        {
+          "name": "kilogram (kg)",
+          "conversions": {
+            "gram (g)": 1000,
+            "milligram (mg)": 1000000,
+            "ton (t)": 0.001,
+            "pound (lb)": 2.20462
+          }
+        },
+        {
+          "name": "gram (g)",
+          "conversions": {
+            "kilogram (kg)": 0.001,
+            "milligram (mg)": 1000,
+            "ton (t)": 0.000001,
+            "pound (lb)": 0.00220462
+          }
+        },
+        {
+          "name": "milligram (mg)",
+          "conversions": {
+            "kilogram (kg)": 0.000001,
+            "gram (g)": 0.001,
+            "ton (t)": 0.000000001,
+            "pound (lb)": 0.00000220462
+          }
+        },
+        {
+          "name": "ton (t)",
+          "conversions": {
+            "kilogram (kg)": 1000,
+            "gram (g)": 1000000,
+            "milligram (mg)": 1000000000,
+            "pound (lb)": 2204.62
+          }
+        },
+        {
+          "name": "pound (lb)",
+          "conversions": {
+            "kilogram (kg)": 0.453592,
+            "gram (g)": 453.592,
+            "milligram (mg)": 453592,
+            "ton (t)": 0.000453592
+          }
+        }
+      ]
+    },
+    {
+      "type": "Temperature 🌡️",
+      "units": [
+        {
+          "name": "Celsius (°C)",
+          "conversions": {
+            "Fahrenheit (°F)": "°C * 9/5 + 32",
+            "Kelvin (K)": "°C + 273.15"
+          }
+        },
+        {
+          "name": "Fahrenheit (°F)",
+          "conversions": {
+            "Celsius (°C)": "(°F - 32) * 5/9",
+            "Kelvin (K)": "(°F - 32) * 5/9 + 273.15"
+          }
+        },
+        {
+          "name": "Kelvin (K)",
+          "conversions": {
+            "Celsius (°C)": "K - 273.15",
+            "Fahrenheit (°F)": "(K - 273.15) * 9/5 + 32"
+          }
+        }
+      ]
+    },
+    {
+      "type": "Volume 📦",
+      "units": [
+        {
+          "name": "liter (L)",
+          "conversions": {
+            "milliliter (mL)": 1000,
+            "cubic meter (m³)": 0.001,
+            "gallon (gal)": 0.264172,
+            "cubic centimeter (cm³)": 1000
+          }
+        },
+        {
+          "name": "milliliter (mL)",
+          "conversions": {
+            "liter (L)": 0.001,
+            "cubic meter (m³)": 0.000001,
+            "gallon (gal)": 0.000264172,
+            "cubic centimeter (cm³)": 1
+          }
+        },
+        {
+          "name": "cubic meter (m³)",
+          "conversions": {
+            "liter (L)": 1000,
+            "milliliter (mL)": 1000000,
+            "gallon (gal)": 264.172,
+            "cubic centimeter (cm³)": 1000000
+          }
+        },
+        {
+          "name": "gallon (gal)",
+          "conversions": {
+            "liter (L)": 3.78541,
+            "milliliter (mL)": 3785.41,
+            "cubic meter (m³)": 0.00378541,
+            "cubic centimeter (cm³)": 3785.41
+          }
+        },
+        {
+          "name": "cubic centimeter (cm³)",
+          "conversions": {
+            "liter (L)": 0.001,
+            "milliliter (mL)": 1,
+            "cubic meter (m³)": 0.000001,
+            "gallon (gal)": 0.000264172
+          }
+        }
+      ]
+    }
+  ]
+}
