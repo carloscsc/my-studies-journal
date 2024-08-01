@@ -2,13 +2,17 @@
 
 - [2024](#2024)
   - [July](#july)
-    - [Wednesday, the 7th](#wednesday-the-7th)
+    - [Wednesday, the 31st](#wednesday-the-31st)
 
 # 2024
 
+<!-- ## August
+
+### Thursday, the 1st -->
+
 ## July
 
-### Wednesday, the 7th
+### Wednesday, the 31st
 
 - [(DOC) Renaming a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)
 - [(REPO) "Dropdowns" in Markdown](https://gist.github.com/citrusui/07978f14b11adada364ff901e27c7f61) - I was going to try to organize this document into sections, but in the end, I found it less intuitive than creating a structure with titles and subtitles. However, I left the reference because I found it interesting.
