@@ -12,7 +12,7 @@
 
 ### Friday, the 2nd
 
-- [(DOC) Papa Parse](https://www.papaparse.com/)
+- [(DOC/Tool) Papa Parse](https://www.papaparse.com/)
 
 - [(Course) Learn Form Validation by Building a Calorie Counter [steps: 01 to 19 of 96]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-form-validation-by-building-a-calorie-counter)
 
