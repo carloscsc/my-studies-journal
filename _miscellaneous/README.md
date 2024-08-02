@@ -12,8 +12,8 @@
 
 ### Friday, the 2nd
 
-- [TsParticle Confetti\*](https://confetti.js.org/#)
-- [TsParticle - GitHub\*](https://github.com/tsparticles/tsparticles)
+- [tsParticle Confetti\*](https://confetti.js.org/#)
+- [tsParticle - GitHub\*](https://github.com/tsparticles/tsparticles)
 - [Module tsParticles Full Bundle - v3.4.0\*](https://particles.js.org/docs/modules/tsParticles_Full_Bundle.html)
 
 - [(DOC/TOOL) Papa Parse - Parse CSV to JSON](https://www.papaparse.com/)
@@ -22,7 +22,7 @@
 
 - [(Course) Introduction to the Learn Basic Debugging [steps: 01 to 08 of 08]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-basic-debugging-by-building-a-random-background-color-changer)
 
-**\*** About TsParticle
+**\*About tsParticle:**
 I discovered TsParticle when I was looking for something to use in a raffle system I created, and I wanted confetti to appear when the winner's name was announced. However, since I am using Vite and JS in module form, it was quite unintuitive to get it to work.
 
 So, I ended up using the three links provided along with some custom solutions to achieve the desired result. To make it easier for anyone facing the same problem, here is the step-by-step guide on how I implemented it.
