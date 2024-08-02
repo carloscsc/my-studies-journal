@@ -12,9 +12,9 @@
 
 ### Friday, the 2nd
 
-- [tsParticle Confetti\*](https://confetti.js.org/#)
-- [tsParticle - GitHub\*](https://github.com/tsparticles/tsparticles)
-- [Module tsParticles Full Bundle - v3.4.0\*](https://particles.js.org/docs/modules/tsParticles_Full_Bundle.html)
+- [(TOOL) tsParticle Confetti\*](https://confetti.js.org/#)
+- [(DOC) tsParticle - GitHub\*](https://github.com/tsparticles/tsparticles)
+- [(DOC) Module tsParticles Full Bundle - v3.4.0\*](https://particles.js.org/docs/modules/tsParticles_Full_Bundle.html)
 
 - [(DOC/TOOL) Papa Parse - Parse CSV to JSON](https://www.papaparse.com/)
 
