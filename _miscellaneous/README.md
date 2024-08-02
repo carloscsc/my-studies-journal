@@ -12,7 +12,7 @@
 
 ### Friday, the 2nd
 
-- [(Course) Learn Form Validation by Building a Calorie Counter [steps: 01 to 20 of 96]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-form-validation-by-building-a-calorie-counter)
+- [(Course) Learn Form Validation by Building a Calorie Counter [steps: 01 to 19 of 96]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-form-validation-by-building-a-calorie-counter)
 
 - [(Course) Introduction to the Learn Basic Debugging [steps: 01 to 08 of 08]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-basic-debugging-by-building-a-random-background-color-changer)
 
