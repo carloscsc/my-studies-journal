@@ -12,6 +12,7 @@
 
 ### Friday, the 2nd
 
+- [(Tutorial) React Full Course for free ⚛️ (2024)](https://www.youtube.com/watch?v=CgkZ7MvWUAA&t=5922s&ab_channel=BroCode)
 - [(TOOL) tsParticle Confetti\*](https://confetti.js.org/#)
 - [(DOC) tsParticle - GitHub\*](https://github.com/tsparticles/tsparticles)
 - [(DOC) Module tsParticles Full Bundle - v3.4.0\*](https://particles.js.org/docs/modules/tsParticles_Full_Bundle.html)
