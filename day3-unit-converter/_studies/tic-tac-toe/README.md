@@ -48,6 +48,6 @@ Project based on the tutorial: [React.dev/Learn/Tutorial: Tic-Tac-Toe](https://r
    ```sh
    npm rum dev
    ```
-## About he Dist Folder
+## About the Dist Folder
 
 In this project, the `dist` folder was included directly in the main `main` branch of the repository, which is generally not a good practice. Ideally, it should be separated into a dedicated production branch, and the `dist` folder should be ignored in the repository's `.gitignore` file. The reason for following this anti-pattern here is that this is a subfolder of a main repository hosted entirely on Vercel. This is the simplest way (that I know of for now) to deploy all the projects in the repository simultaneously without additional configuration. Since these projects are meant for learning and not production, the deployment doesn't need to be more sophisticated or technical. Keeping it simple is often the best approach. (in most cases)
