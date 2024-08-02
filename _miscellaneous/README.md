@@ -1,6 +1,10 @@
 **Note:** This repository is part of a personal project called [my-studies-journal](https://github.com/carloscsc/my-studies-journal). The goal is to organize the code, study materials, and personal projects I use daily. For more details, please visit the main page of the repository.
 
-[toc]
+- [2024](#2024)
+  - [August](#august)
+    - [Friday, the 2nd](#friday-the-2nd)
+  - [July](#july)
+    - [Wednesday, the 31st](#wednesday-the-31st)
 
 # 2024
 
