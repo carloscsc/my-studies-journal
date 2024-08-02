@@ -1,5 +1,6 @@
 {
   "measureTypes": [
+
     {
       "type": "Length 📏",
       "units": [
@@ -83,101 +84,123 @@
       ]
     },
     {
-      "type": "Speed 🚀",
+      "type": "Area 🏞️",
       "units": [
         {
-          "name": "meters per second (m/s)",
+          "name": "square meter (m²)",
           "conversions": {
-            "kilometers per hour (km/h)": 3.6,
-            "miles per hour (mph)": 2.23694,
-            "feet per second (ft/s)": 3.28084,
-            "knots (kt)": 1.94384
+            "square kilometer (km²)": 0.000001,
+            "square centimeter (cm²)": 10000,
+            "square millimeter (mm²)": 1000000,
+            "hectare (ha)": 0.0001,
+            "acre (ac)": 0.000247105,
+            "square foot (ft²)": 10.7639,
+            "square yard (yd²)": 1.19599,
+            "square mile (mi²)": 3.861e-7
           }
         },
         {
-          "name": "kilometers per hour (km/h)",
+          "name": "square kilometer (km²)",
           "conversions": {
-            "meters per second (m/s)": 0.277778,
-            "miles per hour (mph)": 0.621371,
-            "feet per second (ft/s)": 0.911344,
-            "knots (kt)": 0.539957
+            "square meter (m²)": 1000000,
+            "square centimeter (cm²)": 10000000000,
+            "square millimeter (mm²)": 1000000000000,
+            "hectare (ha)": 100,
+            "acre (ac)": 247.105,
+            "square foot (ft²)": 10763910.4,
+            "square yard (yd²)": 1195990.05,
+            "square mile (mi²)": 0.386102
           }
         },
         {
-          "name": "miles per hour (mph)",
+          "name": "square centimeter (cm²)",
           "conversions": {
-            "meters per second (m/s)": 0.44704,
-            "kilometers per hour (km/h)": 1.60934,
-            "feet per second (ft/s)": 1.46667,
-            "knots (kt)": 0.868976
+            "square meter (m²)": 0.0001,
+            "square kilometer (km²)": 1e-10,
+            "square millimeter (mm²)": 100,
+            "hectare (ha)": 1e-8,
+            "acre (ac)": 2.47105e-8,
+            "square foot (ft²)": 0.00107639,
+            "square yard (yd²)": 0.000119599,
+            "square mile (mi²)": 3.861e-11
           }
         },
         {
-          "name": "feet per second (ft/s)",
+          "name": "square millimeter (mm²)",
           "conversions": {
-            "meters per second (m/s)": 0.3048,
-            "kilometers per hour (km/h)": 1.09728,
-            "miles per hour (mph)": 0.681818,
-            "knots (kt)": 0.592484
+            "square meter (m²)": 0.000001,
+            "square kilometer (km²)": 1e-12,
+            "square centimeter (cm²)": 0.01,
+            "hectare (ha)": 1e-10,
+            "acre (ac)": 2.47105e-10,
+            "square foot (ft²)": 1.07639e-5,
+            "square yard (yd²)": 1.19599e-6,
+            "square mile (mi²)": 3.861e-13
           }
         },
         {
-          "name": "knots (kt)",
+          "name": "hectare (ha)",
           "conversions": {
-            "meters per second (m/s)": 0.514444,
-            "kilometers per hour (km/h)": 1.852,
-            "miles per hour (mph)": 1.15078,
-            "feet per second (ft/s)": 1.68781
-          }
-        }
-      ]
-    },
-    {
-      "type": "Weight ⚖️",
-      "units": [
-        {
-          "name": "kilogram (kg)",
-          "conversions": {
-            "gram (g)": 1000,
-            "milligram (mg)": 1000000,
-            "ton (t)": 0.001,
-            "pound (lb)": 2.20462
+            "square meter (m²)": 10000,
+            "square kilometer (km²)": 0.01,
+            "square centimeter (cm²)": 100000000,
+            "square millimeter (mm²)": 10000000000,
+            "acre (ac)": 2.47105,
+            "square foot (ft²)": 107639,
+            "square yard (yd²)": 11959.9,
+            "square mile (mi²)": 0.00386102
           }
         },
         {
-          "name": "gram (g)",
+          "name": "acre (ac)",
           "conversions": {
-            "kilogram (kg)": 0.001,
-            "milligram (mg)": 1000,
-            "ton (t)": 0.000001,
-            "pound (lb)": 0.00220462
+            "square meter (m²)": 4046.86,
+            "square kilometer (km²)": 0.00404686,
+            "square centimeter (cm²)": 40468600,
+            "square millimeter (mm²)": 4046860000,
+            "hectare (ha)": 0.404686,
+            "square foot (ft²)": 43560,
+            "square yard (yd²)": 4840,
+            "square mile (mi²)": 0.0015625
           }
         },
         {
-          "name": "milligram (mg)",
+          "name": "square foot (ft²)",
           "conversions": {
-            "kilogram (kg)": 0.000001,
-            "gram (g)": 0.001,
-            "ton (t)": 0.000000001,
-            "pound (lb)": 0.00000220462
+            "square meter (m²)": 0.092903,
+            "square kilometer (km²)": 9.2903e-8,
+            "square centimeter (cm²)": 929.03,
+            "square millimeter (mm²)": 92903,
+            "hectare (ha)": 9.2903e-6,
+            "acre (ac)": 0.0000229568,
+            "square yard (yd²)": 0.111111,
+            "square mile (mi²)": 3.587e-8
           }
         },
         {
-          "name": "ton (t)",
+          "name": "square yard (yd²)",
           "conversions": {
-            "kilogram (kg)": 1000,
-            "gram (g)": 1000000,
-            "milligram (mg)": 1000000000,
-            "pound (lb)": 2204.62
+            "square meter (m²)": 0.836127,
+            "square kilometer (km²)": 8.36127e-7,
+            "square centimeter (cm²)": 8361.27,
+            "square millimeter (mm²)": 836127,
+            "hectare (ha)": 8.36127e-5,
+            "acre (ac)": 0.000206612,
+            "square foot (ft²)": 9,
+            "square mile (mi²)": 3.2283e-7
           }
         },
         {
-          "name": "pound (lb)",
+          "name": "square mile (mi²)",
           "conversions": {
-            "kilogram (kg)": 0.453592,
-            "gram (g)": 453.592,
-            "milligram (mg)": 453592,
-            "ton (t)": 0.000453592
+            "square meter (m²)": 2589988.11,
+            "square kilometer (km²)": 2.58999,
+            "square centimeter (cm²)": 25899881100,
+            "square millimeter (mm²)": 2589988110000,
+            "hectare (ha)": 258.999,
+            "acre (ac)": 640,
+            "square foot (ft²)": 27878400,
+            "square yard (yd²)": 3097600
           }
         }
       ]
@@ -228,6 +251,1036 @@
             "milliliter (mL)": 1,
             "cubic meter (m³)": 0.000001,
             "gallon (gal)": 0.000264172
+          }
+        }
+      ]
+    },
+    {
+      "type": "Mass ⚖️",
+      "units": [
+        {
+          "name": "kilogram (kg)",
+          "conversions": {
+            "gram (g)": 1000,
+            "milligram (mg)": 1000000,
+            "ton (t)": 0.001,
+            "pound (lb)": 2.20462
+          }
+        },
+        {
+          "name": "gram (g)",
+          "conversions": {
+            "kilogram (kg)": 0.001,
+            "milligram (mg)": 1000,
+            "ton (t)": 0.000001,
+            "pound (lb)": 0.00220462
+          }
+        },
+        {
+          "name": "milligram (mg)",
+          "conversions": {
+            "kilogram (kg)": 0.000001,
+            "gram (g)": 0.001,
+            "ton (t)": 0.000000001,
+            "pound (lb)": 0.00000220462
+          }
+        },
+        {
+          "name": "ton (t)",
+          "conversions": {
+            "kilogram (kg)": 1000,
+            "gram (g)": 1000000,
+            "milligram (mg)": 1000000000,
+            "pound (lb)": 2204.62
+          }
+        },
+        {
+          "name": "pound (lb)",
+          "conversions": {
+            "kilogram (kg)": 0.453592,
+            "gram (g)": 453.592,
+            "milligram (mg)": 453592,
+            "ton (t)": 0.000453592
+          }
+        }
+      ]
+    },
+    {
+      "type": "Weight 🏋️",
+      "units": [
+        {
+          "name": "newton (N)",
+          "conversions": {
+            "kilogram-force (kgf)": 0.101972,
+            "pound-force (lbf)": 0.224809
+          }
+        },
+        {
+          "name": "kilogram-force (kgf)",
+          "conversions": {
+            "newton (N)": 9.80665,
+            "pound-force (lbf)": 2.20462
+          }
+        },
+        {
+          "name": "pound-force (lbf)",
+          "conversions": {
+            "newton (N)": 4.44822,
+            "kilogram-force (kgf)": 0.453592
+          }
+        }
+      ]
+    },
+    {
+      "type": "Time ⏰",
+      "units": [
+        {
+          "name": "second (s)",
+          "conversions": {
+            "millisecond (ms)": 1000,
+            "minute (min)": 0.0166667,
+            "hour (h)": 0.000277778,
+            "day (d)": 0.0000115741,
+            "week (wk)": 0.0000016534,
+            "year (yr)": 3.17098e-8
+          }
+        },
+        {
+          "name": "millisecond (ms)",
+          "conversions": {
+            "second (s)": 0.001,
+            "minute (min)": 0.0000166667,
+            "hour (h)": 0.000000277778,
+            "day (d)": 0.0000000115741,
+            "week (wk)": 0.0000000016534,
+            "year (yr)": 3.17098e-11
+          }
+        },
+        {
+          "name": "minute (min)",
+          "conversions": {
+            "second (s)": 60,
+            "millisecond (ms)": 60000,
+            "hour (h)": 0.0166667,
+            "day (d)": 0.000694444,
+            "week (wk)": 0.0000992063,
+            "year (yr)": 0.0000019026
+          }
+        },
+        {
+          "name": "hour (h)",
+          "conversions": {
+            "second (s)": 3600,
+            "millisecond (ms)": 3600000,
+            "minute (min)": 60,
+            "day (d)": 0.0416667,
+            "week (wk)": 0.00595238,
+            "year (yr)": 0.000114155
+          }
+        },
+        {
+          "name": "day (d)",
+          "conversions": {
+            "second (s)": 86400,
+            "millisecond (ms)": 86400000,
+            "minute (min)": 1440,
+            "hour (h)": 24,
+            "week (wk)": 0.142857,
+            "year (yr)": 0.00273973
+          }
+        },
+        {
+          "name": "week (wk)",
+          "conversions": {
+            "second (s)": 604800,
+            "millisecond (ms)": 604800000,
+            "minute (min)": 10080,
+            "hour (h)": 168,
+            "day (d)": 7,
+            "year (yr)": 0.0191781
+          }
+        },
+        {
+          "name": "year (yr)",
+          "conversions": {
+            "second (s)": 31556952,
+            "millisecond (ms)": 31556952000,
+            "minute (min)": 525949,
+            "hour (h)": 8765.81,
+            "day (d)": 365.242,
+            "week (wk)": 52.1775
+          }
+        }
+      ]
+    },
+    {
+      "type": "Speed 🚀",
+      "units": [
+        {
+          "name": "meters per second (m/s)",
+          "conversions": {
+            "kilometers per hour (km/h)": 3.6,
+            "miles per hour (mph)": 2.23694,
+            "feet per second (ft/s)": 3.28084,
+            "knots (kt)": 1.94384,
+            "mach (M)": 0.00293858,
+            "speed of light (c)": 3.33564e-9
+          }
+        },
+        {
+          "name": "kilometers per hour (km/h)",
+          "conversions": {
+            "meters per second (m/s)": 0.277778,
+            "miles per hour (mph)": 0.621371,
+            "feet per second (ft/s)": 0.911344,
+            "knots (kt)": 0.539957,
+            "mach (M)": 0.000816273,
+            "speed of light (c)": 9.26567e-10
+          }
+        },
+        {
+          "name": "miles per hour (mph)",
+          "conversions": {
+            "meters per second (m/s)": 0.44704,
+            "kilometers per hour (km/h)": 1.60934,
+            "feet per second (ft/s)": 1.46667,
+            "knots (kt)": 0.868976,
+            "mach (M)": 0.00130332,
+            "speed of light (c)": 1.49116e-9
+          }
+        },
+        {
+          "name": "feet per second (ft/s)",
+          "conversions": {
+            "meters per second (m/s)": 0.3048,
+            "kilometers per hour (km/h)": 1.09728,
+            "miles per hour (mph)": 0.681818,
+            "knots (kt)": 0.592484,
+            "mach (M)": 0.000888889,
+            "speed of light (c)": 9.83392e-10
+          }
+        },
+        {
+          "name": "knots (kt)",
+          "conversions": {
+            "meters per second (m/s)": 0.514444,
+            "kilometers per hour (km/h)": 1.852,
+            "miles per hour (mph)": 1.15078,
+            "feet per second (ft/s)": 1.68781,
+            "mach (M)": 0.00151064,
+            "speed of light (c)": 1.67195e-9
+          }
+        },
+        {
+          "name": "mach (M)",
+          "conversions": {
+            "meters per second (m/s)": 340.29,
+            "kilometers per hour (km/h)": 1225.08,
+            "miles per hour (mph)": 761.207,
+            "feet per second (ft/s)": 1116.47,
+            "knots (kt)": 661.47,
+            "speed of light (c)": 0.001
+          }
+        },
+        {
+          "name": "speed of light (c)",
+          "conversions": {
+            "meters per second (m/s)": 299792458,
+            "kilometers per hour (km/h)": 1079252848.8,
+            "miles per hour (mph)": 670616629.384,
+            "feet per second (ft/s)": 983571056.43,
+            "knots (kt)": 582749918.4,
+            "mach (M)": 1000
+          }
+        }
+      ]
+    },
+    {
+      "type": "Frequency 📡",
+      "units": [
+        {
+          "name": "hertz (Hz)",
+          "conversions": {
+            "kilohertz (kHz)": 0.001,
+            "megahertz (MHz)": 1e-6,
+            "gigahertz (GHz)": 1e-9,
+            "terahertz (THz)": 1e-12,
+            "millihertz (mHz)": 1000,
+            "microhertz (µHz)": 1e6,
+            "nanohertz (nHz)": 1e9,
+            "picohertz (pHz)": 1e12
+          }
+        },
+        {
+          "name": "kilohertz (kHz)",
+          "conversions": {
+            "hertz (Hz)": 1000,
+            "megahertz (MHz)": 0.001,
+            "gigahertz (GHz)": 1e-6,
+            "terahertz (THz)": 1e-9,
+            "millihertz (mHz)": 1e6,
+            "microhertz (µHz)": 1e9,
+            "nanohertz (nHz)": 1e12,
+            "picohertz (pHz)": 1e15
+          }
+        },
+        {
+          "name": "megahertz (MHz)",
+          "conversions": {
+            "hertz (Hz)": 1e6,
+            "kilohertz (kHz)": 1000,
+            "gigahertz (GHz)": 0.001,
+            "terahertz (THz)": 1e-6,
+            "millihertz (mHz)": 1e9,
+            "microhertz (µHz)": 1e12,
+            "nanohertz (nHz)": 1e15,
+            "picohertz (pHz)": 1e18
+          }
+        },
+        {
+          "name": "gigahertz (GHz)",
+          "conversions": {
+            "hertz (Hz)": 1e9,
+            "kilohertz (kHz)": 1e6,
+            "megahertz (MHz)": 1000,
+            "terahertz (THz)": 0.001,
+            "millihertz (mHz)": 1e12,
+            "microhertz (µHz)": 1e15,
+            "nanohertz (nHz)": 1e18,
+            "picohertz (pHz)": 1e21
+          }
+        },
+        {
+          "name": "terahertz (THz)",
+          "conversions": {
+            "hertz (Hz)": 1e12,
+            "kilohertz (kHz)": 1e9,
+            "megahertz (MHz)": 1e6,
+            "gigahertz (GHz)": 1000,
+            "millihertz (mHz)": 1e15,
+            "microhertz (µHz)": 1e18,
+            "nanohertz (nHz)": 1e21,
+            "picohertz (pHz)": 1e24
+          }
+        }
+      ]
+    },
+    {
+      "type": "Electric Current 🔌",
+      "units": [
+        {
+          "name": "ampere (A)",
+          "conversions": {
+            "milliampere (mA)": 1000,
+            "microampere (µA)": 1000000,
+            "nanoampere (nA)": 1000000000,
+            "kiloampere (kA)": 0.001,
+            "megaampere (MA)": 0.000001
+          }
+        },
+        {
+          "name": "milliampere (mA)",
+          "conversions": {
+            "ampere (A)": 0.001,
+            "microampere (µA)": 1000,
+            "nanoampere (nA)": 1000000,
+            "kiloampere (kA)": 0.000001,
+            "megaampere (MA)": 0.000000001
+          }
+        },
+        {
+          "name": "microampere (µA)",
+          "conversions": {
+            "ampere (A)": 0.000001,
+            "milliampere (mA)": 0.001,
+            "nanoampere (nA)": 1000,
+            "kiloampere (kA)": 0.000000001,
+            "megaampere (MA)": 0.000000000001
+          }
+        },
+        {
+          "name": "nanoampere (nA)",
+          "conversions": {
+            "ampere (A)": 0.000000001,
+            "milliampere (mA)": 0.000001,
+            "microampere (µA)": 0.001,
+            "kiloampere (kA)": 0.000000000001,
+            "megaampere (MA)": 0.000000000000001
+          }
+        },
+        {
+          "name": "kiloampere (kA)",
+          "conversions": {
+            "ampere (A)": 1000,
+            "milliampere (mA)": 1000000,
+            "microampere (µA)": 1000000000,
+            "nanoampere (nA)": 1000000000000,
+            "megaampere (MA)": 0.001
+          }
+        },
+        {
+          "name": "megaampere (MA)",
+          "conversions": {
+            "ampere (A)": 1000000,
+            "milliampere (mA)": 1000000000,
+            "microampere (µA)": 1000000000000,
+            "nanoampere (nA)": 1000000000000000,
+            "kiloampere (kA)": 1000
+          }
+        }
+      ]
+    },
+    {
+      "type": "Electric Charge 🔋",
+      "units": [
+        {
+          "name": "coulomb (C)",
+          "conversions": {
+            "millicoulomb (mC)": 1000,
+            "microcoulomb (µC)": 1e6,
+            "nanocoulomb (nC)": 1e9,
+            "picocoulomb (pC)": 1e12
+          }
+        },
+        {
+          "name": "millicoulomb (mC)",
+          "conversions": {
+            "coulomb (C)": 0.001,
+            "microcoulomb (µC)": 1000,
+            "nanocoulomb (nC)": 1e6,
+            "picocoulomb (pC)": 1e9
+          }
+        },
+        {
+          "name": "microcoulomb (µC)",
+          "conversions": {
+            "coulomb (C)": 1e-6,
+            "millicoulomb (mC)": 0.001,
+            "nanocoulomb (nC)": 1000,
+            "picocoulomb (pC)": 1e6
+          }
+        },
+        {
+          "name": "nanocoulomb (nC)",
+          "conversions": {
+            "coulomb (C)": 1e-9,
+            "millicoulomb (mC)": 1e-6,
+            "microcoulomb (µC)": 0.001,
+            "picocoulomb (pC)": 1000
+          }
+        },
+        {
+          "name": "picocoulomb (pC)",
+          "conversions": {
+            "coulomb (C)": 1e-12,
+            "millicoulomb (mC)": 1e-9,
+            "microcoulomb (µC)": 1e-6,
+            "nanocoulomb (nC)": 0.001
+          }
+        }
+      ]
+    },
+    {
+      "type": "Energy ⚡",
+      "units": [
+        {
+          "name": "joule (J)",
+          "conversions": {
+            "kilojoule (kJ)": 0.001,
+            "calorie (cal)": 0.239006,
+            "kilocalorie (kcal)": 0.000239006,
+            "watt-hour (Wh)": 0.000277778,
+            "kilowatt-hour (kWh)": 2.77778e-7
+          }
+        },
+        {
+          "name": "kilojoule (kJ)",
+          "conversions": {
+            "joule (J)": 1000,
+            "calorie (cal)": 239.006,
+            "kilocalorie (kcal)": 0.239006,
+            "watt-hour (Wh)": 0.277778,
+            "kilowatt-hour (kWh)": 0.000277778
+          }
+        },
+        {
+          "name": "calorie (cal)",
+          "conversions": {
+            "joule (J)": 4.184,
+            "kilojoule (kJ)": 0.004184,
+            "kilocalorie (kcal)": 0.001,
+            "watt-hour (Wh)": 0.00116222,
+            "kilowatt-hour (kWh)": 1.16222e-6
+          }
+        },
+        {
+          "name": "kilocalorie (kcal)",
+          "conversions": {
+            "joule (J)": 4184,
+            "kilojoule (kJ)": 4.184,
+            "calorie (cal)": 1000,
+            "watt-hour (Wh)": 1.16222,
+            "kilowatt-hour (kWh)": 0.00116222
+          }
+        },
+        {
+          "name": "watt-hour (Wh)",
+          "conversions": {
+            "joule (J)": 3600,
+            "kilojoule (kJ)": 3.6,
+            "calorie (cal)": 860.421,
+            "kilocalorie (kcal)": 0.860421,
+            "kilowatt-hour (kWh)": 0.001
+          }
+        },
+        {
+          "name": "kilowatt-hour (kWh)",
+          "conversions": {
+            "joule (J)": 3600000,
+            "kilojoule (kJ)": 3600,
+            "calorie (cal)": 860421,
+            "kilocalorie (kcal)": 860.421,
+            "watt-hour (Wh)": 1000
+          }
+        }
+      ]
+    },
+    {
+      "type": "Power 🔌",
+      "units": [
+        {
+          "name": "watt (W)",
+          "conversions": {
+            "kilowatt (kW)": 0.001,
+            "megawatt (MW)": 1e-6,
+            "horsepower (hp)": 0.00134102
+          }
+        },
+        {
+          "name": "kilowatt (kW)",
+          "conversions": {
+            "watt (W)": 1000,
+            "megawatt (MW)": 0.001,
+            "horsepower (hp)": 1.34102
+          }
+        },
+        {
+          "name": "megawatt (MW)",
+          "conversions": {
+            "watt (W)": 1000000,
+            "kilowatt (kW)": 1000,
+            "horsepower (hp)": 1341.02
+          }
+        },
+        {
+          "name": "horsepower (hp)",
+          "conversions": {
+            "watt (W)": 745.7,
+            "kilowatt (kW)": 0.7457,
+            "megawatt (MW)": 0.0007457
+          }
+        }
+      ]
+    },
+    {
+      "type": "Pressure ⏲️",
+      "units": [
+        {
+          "name": "pascal (Pa)",
+          "conversions": {
+            "kilopascal (kPa)": 0.001,
+            "bar (bar)": 1e-5,
+            "atmosphere (atm)": 9.86923e-6,
+            "psi (psi)": 0.000145038
+          }
+        },
+        {
+          "name": "kilopascal (kPa)",
+          "conversions": {
+            "pascal (Pa)": 1000,
+            "bar (bar)": 0.01,
+            "atmosphere (atm)": 0.00986923,
+            "psi (psi)": 0.145038
+          }
+        },
+        {
+          "name": "bar (bar)",
+          "conversions": {
+            "pascal (Pa)": 100000,
+            "kilopascal (kPa)": 100,
+            "atmosphere (atm)": 0.986923,
+            "psi (psi)": 14.5038
+          }
+        },
+        {
+          "name": "atmosphere (atm)",
+          "conversions": {
+            "pascal (Pa)": 101325,
+            "kilopascal (kPa)": 101.325,
+            "bar (bar)": 1.01325,
+            "psi (psi)": 14.6959
+          }
+        },
+        {
+          "name": "psi (psi)",
+          "conversions": {
+            "pascal (Pa)": 6894.76,
+            "kilopascal (kPa)": 6.89476,
+            "bar (bar)": 0.0689476,
+            "atmosphere (atm)": 0.0680459
+          }
+        }
+      ]
+    },
+    {
+      "type": "Force 💪",
+      "units": [
+        {
+          "name": "newton (N)",
+          "conversions": {
+            "kilonewton (kN)": 0.001,
+            "meganewton (MN)": 0.000001,
+            "dyne (dyn)": 100000,
+            "pound-force (lbf)": 0.224809,
+            "kilogram-force (kgf)": 0.101972
+          }
+        },
+        {
+          "name": "kilonewton (kN)",
+          "conversions": {
+            "newton (N)": 1000,
+            "meganewton (MN)": 0.001,
+            "dyne (dyn)": 100000000,
+            "pound-force (lbf)": 224.809,
+            "kilogram-force (kgf)": 101.972
+          }
+        },
+        {
+          "name": "meganewton (MN)",
+          "conversions": {
+            "newton (N)": 1000000,
+            "kilonewton (kN)": 1000,
+            "dyne (dyn)": 100000000000,
+            "pound-force (lbf)": 224809,
+            "kilogram-force (kgf)": 101972
+          }
+        },
+        {
+          "name": "dyne (dyn)",
+          "conversions": {
+            "newton (N)": 0.00001,
+            "kilonewton (kN)": 0.00000001,
+            "meganewton (MN)": 1e-11,
+            "pound-force (lbf)": 0.0000224809,
+            "kilogram-force (kgf)": 0.0000101972
+          }
+        },
+        {
+          "name": "pound-force (lbf)",
+          "conversions": {
+            "newton (N)": 4.44822,
+            "kilonewton (kN)": 0.00444822,
+            "meganewton (MN)": 0.00000444822,
+            "dyne (dyn)": 444822,
+            "kilogram-force (kgf)": 0.453592
+          }
+        },
+        {
+          "name": "kilogram-force (kgf)",
+          "conversions": {
+            "newton (N)": 9.80665,
+            "kilonewton (kN)": 0.00980665,
+            "meganewton (MN)": 0.00000980665,
+            "dyne (dyn)": 980665,
+            "pound-force (lbf)": 2.20462
+          }
+        }
+      ]
+    },
+    {
+      "type": "Torque 🔧",
+      "units": [
+        {
+          "name": "newton meter (Nm)",
+          "conversions": {
+            "kilonewton meter (kNm)": 0.001,
+            "pound-force foot (lbf·ft)": 0.737562,
+            "pound-force inch (lbf·in)": 8.85075
+          }
+        },
+        {
+          "name": "kilonewton meter (kNm)",
+          "conversions": {
+            "newton meter (Nm)": 1000,
+            "pound-force foot (lbf·ft)": 737.562,
+            "pound-force inch (lbf·in)": 8850.75
+          }
+        },
+        {
+          "name": "pound-force foot (lbf·ft)",
+          "conversions": {
+            "newton meter (Nm)": 1.35582,
+            "kilonewton meter (kNm)": 0.00135582,
+            "pound-force inch (lbf·in)": 12
+          }
+        },
+        {
+          "name": "pound-force inch (lbf·in)",
+          "conversions": {
+            "newton meter (Nm)": 0.113,
+            "kilonewton meter (kNm)": 0.000113,
+            "pound-force foot (lbf·ft)": 0.0833333
+          }
+        }
+      ]
+    },
+    {
+      "type": "Fuel Economy ⛽",
+      "units": [
+        {
+          "name": "miles per gallon (mpg)",
+          "conversions": {
+            "kilometers per liter (kmpl)": 0.425144,
+            "liters per 100 kilometers (l100km)": 235.215,
+            "miles per gallon UK (mpgUK)": 1.20095
+          }
+        },
+        {
+          "name": "kilometers per liter (kmpl)",
+          "conversions": {
+            "miles per gallon (mpg)": 2.35215,
+            "liters per 100 kilometers (l100km)": 42.5144,
+            "miles per gallon UK (mpgUK)": 2.82481
+          }
+        },
+        {
+          "name": "liters per 100 kilometers (l100km)",
+          "conversions": {
+            "miles per gallon (mpg)": 0.00425144,
+            "kilometers per liter (kmpl)": 0.425144,
+            "miles per gallon UK (mpgUK)": 0.0354
+          }
+        },
+        {
+          "name": "miles per gallon UK (mpgUK)",
+          "conversions": {
+            "miles per gallon (mpg)": 0.832674,
+            "kilometers per liter (kmpl)": 0.354006,
+            "liters per 100 kilometers (l100km)": 282.481
+          }
+        }
+      ]
+    },
+    {
+      "type": "Density 🌫️",
+      "units": [
+        {
+          "name": "kilogram per cubic meter (kg/m³)",
+          "conversions": {
+            "gram per cubic centimeter (g/cm³)": 0.001,
+            "pound per cubic inch (lb/in³)": 0.0000361273,
+            "pound per cubic foot (lb/ft³)": 0.06242796
+          }
+        },
+        {
+          "name": "gram per cubic centimeter (g/cm³)",
+          "conversions": {
+            "kilogram per cubic meter (kg/m³)": 1000,
+            "pound per cubic inch (lb/in³)": 0.0361273,
+            "pound per cubic foot (lb/ft³)": 62.42796
+          }
+        },
+        {
+          "name": "pound per cubic inch (lb/in³)",
+          "conversions": {
+            "kilogram per cubic meter (kg/m³)": 27679.90471,
+            "gram per cubic centimeter (g/cm³)": 27.67990471,
+            "pound per cubic foot (lb/ft³)": 1728
+          }
+        },
+        {
+          "name": "pound per cubic foot (lb/ft³)",
+          "conversions": {
+            "kilogram per cubic meter (kg/m³)": 16.018463,
+            "gram per cubic centimeter (g/cm³)": 0.016018463,
+            "pound per cubic inch (lb/in³)": 0.000578703
+          }
+        }
+      ]
+    },
+    {
+      "type": "Illuminance 💡",
+      "units": [
+        {
+          "name": "lux (lx)",
+          "conversions": {
+            "phot (ph)": 0.0001,
+            "foot-candle (fc)": 0.092903,
+            "lumen per square meter (lm/m2)": 1,
+            "lumen per square centimeter (lm/cm2)": 0.0001
+          }
+        },
+        {
+          "name": "phot (ph)",
+          "conversions": {
+            "lux (lx)": 10000,
+            "foot-candle (fc)": 929.03,
+            "lumen per square meter (lm/m2)": 10000,
+            "lumen per square centimeter (lm/cm2)": 1
+          }
+        },
+        {
+          "name": "foot-candle (fc)",
+          "conversions": {
+            "lux (lx)": 10.7639,
+            "phot (ph)": 0.00107639,
+            "lumen per square meter (lm/m2)": 10.7639,
+            "lumen per square centimeter (lm/cm2)": 0.00107639
+          }
+        },
+        {
+          "name": "lumen per square meter (lm/m2)",
+          "conversions": {
+            "lux (lx)": 1,
+            "phot (ph)": 0.0001,
+            "foot-candle (fc)": 0.092903,
+            "lumen per square centimeter (lm/cm2)": 0.0001
+          }
+        },
+        {
+          "name": "lumen per square centimeter (lm/cm2)",
+          "conversions": {
+            "lux (lx)": 10000,
+            "phot (ph)": 1,
+            "foot-candle (fc)": 929.03,
+            "lumen per square meter (lm/m2)": 10000
+          }
+        }
+      ]
+    },
+    {
+      "type": "Data Storage 💾",
+      "units": [
+        {
+          "name": "bit (b)",
+          "conversions": {
+            "byte (B)": 0.125,
+            "kilobit (Kb)": 0.001,
+            "megabit (Mb)": 1e-6,
+            "gigabit (Gb)": 1e-9,
+            "terabit (Tb)": 1e-12,
+            "petabit (Pb)": 1e-15,
+            "exabit (Eb)": 1e-18,
+            "zettabit (Zb)": 1e-21,
+            "yottabit (Yb)": 1e-24
+          }
+        },
+        {
+          "name": "byte (B)",
+          "conversions": {
+            "bit (b)": 8,
+            "kilobyte (KB)": 0.000976563,
+            "megabyte (MB)": 9.53674e-7,
+            "gigabyte (GB)": 9.31323e-10,
+            "terabyte (TB)": 9.09495e-13,
+            "petabyte (PB)": 8.88178e-16,
+            "exabyte (EB)": 8.67362e-19,
+            "zettabyte (ZB)": 8.47033e-22,
+            "yottabyte (YB)": 8.27181e-25
+          }
+        },
+        {
+          "name": "kilobyte (KB)",
+          "conversions": {
+            "bit (b)": 8192,
+            "byte (B)": 1024,
+            "megabyte (MB)": 0.000976563,
+            "gigabyte (GB)": 9.53674e-7,
+            "terabyte (TB)": 9.31323e-10,
+            "petabyte (PB)": 9.09495e-13,
+            "exabyte (EB)": 8.88178e-16,
+            "zettabyte (ZB)": 8.67362e-19,
+            "yottabyte (YB)": 8.47033e-22
+          }
+        },
+        {
+          "name": "megabyte (MB)",
+          "conversions": {
+            "bit (b)": 8388608,
+            "byte (B)": 1048576,
+            "kilobyte (KB)": 1024,
+            "gigabyte (GB)": 0.000976563,
+            "terabyte (TB)": 9.53674e-7,
+            "petabyte (PB)": 9.31323e-10,
+            "exabyte (EB)": 9.09495e-13,
+            "zettabyte (ZB)": 8.88178e-16,
+            "yottabyte (YB)": 8.67362e-19
+          }
+        },
+        {
+          "name": "gigabyte (GB)",
+          "conversions": {
+            "bit (b)": 8589934592,
+            "byte (B)": 1073741824,
+            "kilobyte (KB)": 1048576,
+            "megabyte (MB)": 1024,
+            "terabyte (TB)": 0.000976563,
+            "petabyte (PB)": 9.53674e-7,
+            "exabyte (EB)": 9.31323e-10,
+            "zettabyte (ZB)": 9.09495e-13,
+            "yottabyte (YB)": 8.88178e-16
+          }
+        },
+        {
+          "name": "terabyte (TB)",
+          "conversions": {
+            "bit (b)": 8796093022208,
+            "byte (B)": 1099511627776,
+            "kilobyte (KB)": 1073741824,
+            "megabyte (MB)": 1048576,
+            "gigabyte (GB)": 1024,
+            "petabyte (PB)": 0.000976563,
+            "exabyte (EB)": 9.53674e-7,
+            "zettabyte (ZB)": 9.31323e-10,
+            "yottabyte (YB)": 9.09495e-13
+          }
+        },
+        {
+          "name": "petabyte (PB)",
+          "conversions": {
+            "bit (b)": 9007199254740992,
+            "byte (B)": 1125899906842624,
+            "kilobyte (KB)": 1099511627776,
+            "megabyte (MB)": 1073741824,
+            "gigabyte (GB)": 1048576,
+            "terabyte (TB)": 1024,
+            "exabyte (EB)": 0.000976563,
+            "zettabyte (ZB)": 9.53674e-7,
+            "yottabyte (YB)": 9.31323e-10
+          }
+        },
+        {
+          "name": "exabyte (EB)",
+          "conversions": {
+            "bit (b)": 9223372036854775808,
+            "byte (B)": 1152921504606846976,
+            "kilobyte (KB)": 1125899906842624,
+            "megabyte (MB)": 1099511627776,
+            "gigabyte (GB)": 1073741824,
+            "terabyte (TB)": 1048576,
+            "petabyte (PB)": 1024,
+            "zettabyte (ZB)": 0.000976563,
+            "yottabyte (YB)": 9.53674e-7
+          }
+        },
+        {
+          "name": "zettabyte (ZB)",
+          "conversions": {
+            "bit (b)": 9.44473296573929e+21,
+            "byte (B)": 1.18059162071741e+21,
+            "kilobyte (KB)": 1.15292150460685e+18,
+            "megabyte (MB)": 1.12589990684262e+15,
+            "gigabyte (GB)": 1.099511627776e+12,
+            "terabyte (TB)": 1.073741824e+9,
+            "petabyte (PB)": 1048576,
+            "exabyte (EB)": 1024,
+            "yottabyte (YB)": 0.000976563
+          }
+        },
+        {
+          "name": "yottabyte (YB)",
+          "conversions": {
+            "bit (b)": 9.67140655691703e+24,
+            "byte (B)": 1.20892581961463e+24,
+            "kilobyte (KB)": 1.18059162071741e+21,
+            "megabyte (MB)": 1.15292150460685e+18,
+            "gigabyte (GB)": 1.12589990684262e+15,
+            "terabyte (TB)": 1.099511627776e+12,
+            "petabyte (PB)": 1.073741824e+9,
+            "exabyte (EB)": 1048576,
+            "zettabyte (ZB)": 1024
+          }
+        }
+      ]
+    },
+    {
+      "type": "Angle 📐",
+      "units": [
+        {
+          "name": "degree (deg)",
+          "conversions": {
+            "radian (rad)": 0.0174533,
+            "gradian (grad)": 1.11111,
+            "minute of arc (arcmin)": 60,
+            "second of arc (arcsec)": 3600,
+            "mil (mil)": 17.7777778,
+            "revolution (rev)": 0.00277778
+          }
+        },
+        {
+          "name": "radian (rad)",
+          "conversions": {
+            "degree (deg)": 57.2958,
+            "gradian (grad)": 63.661977,
+            "minute of arc (arcmin)": 3437.75,
+            "second of arc (arcsec)": 206265,
+            "mil (mil)": 1018.59164,
+            "revolution (rev)": 0.159155
+          }
+        },
+        {
+          "name": "gradian (grad)",
+          "conversions": {
+            "degree (deg)": 0.9,
+            "radian (rad)": 0.0157079,
+            "minute of arc (arcmin)": 54,
+            "second of arc (arcsec)": 3240,
+            "mil (mil)": 16,
+            "revolution (rev)": 0.0025
+          }
+        },
+        {
+          "name": "minute of arc (arcmin)",
+          "conversions": {
+            "degree (deg)": 0.0166667,
+            "radian (rad)": 0.000290888,
+            "gradian (grad)": 0.0185185,
+            "second of arc (arcsec)": 60,
+            "mil (mil)": 0.296296,
+            "revolution (rev)": 0.000277778
+          }
+        },
+        {
+          "name": "second of arc (arcsec)",
+          "conversions": {
+            "degree (deg)": 0.000277778,
+            "radian (rad)": 0.00000484814,
+            "gradian (grad)": 0.000308642,
+            "minute of arc (arcmin)": 0.0166667,
+            "mil (mil)": 0.00493827,
+            "revolution (rev)": 0.00000462963
+          }
+        },
+        {
+          "name": "mil (mil)",
+          "conversions": {
+            "degree (deg)": 0.05625,
+            "radian (rad)": 0.000981748,
+            "gradian (grad)": 0.0625,
+            "minute of arc (arcmin)": 3.375,
+            "second of arc (arcsec)": 202.5,
+            "revolution (rev)": 0.00015625
+          }
+        },
+        {
+          "name": "revolution (rev)",
+          "conversions": {
+            "degree (deg)": 360,
+            "radian (rad)": 6.28319,
+            "gradian (grad)": 400,
+            "minute of arc (arcmin)": 21600,
+            "second of arc (arcsec)": 1296000,
+            "mil (mil)": 6400
           }
         }
       ]
