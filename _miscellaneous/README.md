@@ -2,13 +2,33 @@
 
 - [2024](#2024)
   - [August](#august)
+    - [Saturday, the 3rd](#saturday-the-3rd)
     - [Friday, the 2nd](#friday-the-2nd)
+      - [tsParticle](#tsparticle)
   - [July](#july)
     - [Wednesday, the 31st](#wednesday-the-31st)
 
 # 2024
 
+<!-- Days of Week
+“st” is used with numbers ending in 1 (except for 11): 1st, 21st, 31st.
+“nd” is used with numbers ending in 2 (except for 12): 2nd, 22nd.
+“rd” is used with numbers ending in 3 (except for 13): 3rd, 23rd.
+“th” is used for all other numbers: 4th, 5th, 6th, etc.
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+-->
+
 ## August
+
+### Saturday, the 3rd
+
+- [(Course) Learn Form Validation by Building a Calorie Counter [steps: 19 to ## of 35]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-form-validation-by-building-a-calorie-counter) and a bit about [regex](./regex.js)
 
 ### Friday, the 2nd
 
@@ -23,7 +43,8 @@
 
 - [(Course) Introduction to the Learn Basic Debugging [steps: 01 to 08 of 08]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-basic-debugging-by-building-a-random-background-color-changer)
 
-**\*About tsParticle:**
+#### tsParticle
+
 I discovered TsParticle when I was looking for something to use in a raffle system I created, and I wanted confetti to appear when the winner's name was announced. However, since I am using Vite and JS in module form, it was quite unintuitive to get it to work.
 
 So, I ended up using the three links provided along with some custom solutions to achieve the desired result. To make it easier for anyone facing the same problem, here is the step-by-step guide on how I implemented it.
