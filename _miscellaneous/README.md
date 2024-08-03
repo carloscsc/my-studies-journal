@@ -28,6 +28,7 @@ Saturday
 
 ### Saturday, the 3rd
 
+- [(Tutorial) React Full Course for free ⚛️ (2024)](https://www.youtube.com/watch?v=CgkZ7MvWUAA&t=5922s&ab_channel=BroCode)
 - [(Course) Learn Form Validation by Building a Calorie Counter [steps: 19 to ## of 35]](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/#learn-form-validation-by-building-a-calorie-counter) and a bit about [regex](./regex.js)
 
 ### Friday, the 2nd
