@@ -40,7 +40,9 @@ The project is still in development, and more details will be added soon. If you
    cd day3-unit-converter
    ```
 
-   (**Note:** After these steps, GitHub will copy only the folder of this project. However, the original folder structure will be maintained. If you wish, you can copy just this folder `tic-tac-toe` to another directory and ignore all other files downloaded outside this folder)
+   (**Note:** After these steps, GitHub will copy only the folder of this project. However, the original folder structure will be maintained. If you wish, you can copy just this folder `my-studies-journal` to another directory and ignore all other files downloaded outside this folder)
+
+   You may also want to delete the `[_studies](./_studies/)` folder, as it is not part of the project and exists only for my references.
 
 7. Install the dependencies
    ```sh
