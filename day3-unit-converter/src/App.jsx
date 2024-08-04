@@ -1,4 +1,4 @@
-import { useReducer, useEffect } from "react";
+import { useReducer, useEffect, useRef, useState } from "react";
 import MeasureTypesSelector from "./MeasureTypesSelector.jsx";
 import UnitSelector from "./UnitSelector.jsx";
 import Results from "./Results.jsx";
@@ -72,6 +72,13 @@ function App() {
    * @returns {array} - An array containing the current state and a dispatch function.
    */
   const [state, dispatch] = useReducer(reducer, initialState);
+  const inputConverterRef = useRef(state.inputConverter);
+  const inputElementRef = useRef(null);
+  const [shouldFocus, setShouldFocus] = useState(true);
+
+  useEffect(() => {
+    inputConverterRef.current = state.inputConverter;
+  }, [state.inputConverter]);
 
   // Get initial data from db and set initial value for measureTypes
   // and selectedMeasureTypes
@@ -85,30 +92,37 @@ function App() {
       .catch((error) => console.error("Error fetching the measure types:", error));
   }, []);
 
-  // useEffect hook to update state when selectedType or inputConverter changes
+  // useEffect hook to update state when selectedType changes
   // If selectedType has units, dispatch actions to set units and conversions in the state
   useEffect(() => {
     if (state.selectedType.units) {
+      setShouldFocus(true);
       const units = state.selectedType.units;
       const conversions = Object.entries(units[0].conversions);
       dispatch({ type: "SET_UNITS_TO_CONVERT", payload: units });
       dispatch({ type: "SET_UNITS_TO_TARGET", payload: conversions });
       dispatch({ type: "SET_SELECTED_UNIT_TO_CONVERT", payload: units[0] });
       dispatch({ type: "SET_SELECTED_UNIT_TO_TARGET", payload: conversions[0] });
-      dispatch({ type: "SET_INPUT_TARGET", payload: state.inputConverter * conversions[0][1] });
+      dispatch({
+        type: "SET_INPUT_TARGET",
+        payload: inputConverterRef.current * conversions[0][1],
+      });
     }
-  }, [state.selectedType, state.inputConverter]);
+  }, [state.selectedType]);
 
-  // useEffect hook to update state when selectedUnitToConvert or inputConverter changes
+  // useEffect hook to update state when selectedUnitToConvert changes
   // If selectedUnitToConvert has conversions, dispatch actions to set conversions and input target in the state
   useEffect(() => {
     if (state.selectedUnitToConvert.conversions) {
       const conversions = Object.entries(state.selectedUnitToConvert.conversions);
       dispatch({ type: "SET_UNITS_TO_TARGET", payload: conversions });
       dispatch({ type: "SET_SELECTED_UNIT_TO_TARGET", payload: conversions[0] });
-      dispatch({ type: "SET_INPUT_TARGET", payload: state.inputConverter * conversions[0][1] });
+      dispatch({
+        type: "SET_INPUT_TARGET",
+        payload: inputConverterRef.current * conversions[0][1],
+      });
     }
-  }, [state.selectedUnitToConvert, state.inputConverter]);
+  }, [state.selectedUnitToConvert]);
 
   // useEffect hook to update input target when selectedUnitToTarget or inputConverter changes
   // If selectedUnitToTarget has a valid conversion factor, set input target based on conversion
@@ -124,6 +138,14 @@ function App() {
     }
   }, [state.selectedUnitToTarget, state.inputConverter]);
 
+  // useEffect hook to keep the input focused
+  useEffect(() => {
+    if (shouldFocus && inputElementRef.current) {
+      inputElementRef.current.focus();
+      inputElementRef.current.select();
+    }
+  }, [shouldFocus]);
+
   /**
    * Sets the value of the input and updates the converter and target values accordingly.
    *
@@ -134,6 +156,7 @@ function App() {
     const value = e.target.value;
     dispatch({ type: "SET_INPUT_CONVERTER", payload: value });
     dispatch({ type: "SET_INPUT_TARGET", payload: value * state.selectedUnitToTarget[1] });
+    setShouldFocus(false);
   }
 
   return (
@@ -149,6 +172,8 @@ function App() {
         min={1}
         value={state.inputConverter}
         onChange={setValue}
+        onFocus={() => setShouldFocus(true)}
+        ref={inputElementRef}
       />
 
       <UnitSelector
@@ -165,9 +190,14 @@ function App() {
         selected={state.selectedUnitToTarget && state.selectedUnitToTarget[0]}
       />
 
-      {/* <Results output={state.inputTarget} /> */}
-
-      <input type="text" className="input-target" value={state.inputTarget} readOnly />
+      <Results
+        data={{
+          inputConverter: state.inputConverter,
+          inputTarget: state.inputTarget,
+          selectedUnitToConvert: state.selectedUnitToConvert,
+          selectedUnitToTarget: state.selectedUnitToTarget,
+        }}
+      />
     </>
   );
 }
