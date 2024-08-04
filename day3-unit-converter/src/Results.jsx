@@ -1,4 +1,4 @@
-export default function Results({ data }) {
+export default function Results({ data, setHistory }) {
   const { inputConverter, inputTarget, selectedUnitToConvert, selectedUnitToTarget } = data;
 
   /**
@@ -18,19 +18,25 @@ export default function Results({ data }) {
     }
   }
 
+  function save() {
+    setHistory(data);
+  }
+
   return (
     <>
       <div className="results">
-        {inputConverter} {selectedUnitToConvert.name} is equal to
+        {inputConverter} {selectedUnitToConvert} is equal to
         <input type="text" className="input-target" value={inputTarget} readOnly />
-        {selectedUnitToTarget[0]}
+        {selectedUnitToTarget}
       </div>
 
       <div className="actions">
         <button type="button" onClick={copyToClipboard}>
           Copy
         </button>
-        <button type="button">Save result</button>
+        <button type="button" onClick={save}>
+          Save result
+        </button>
       </div>
     </>
   );

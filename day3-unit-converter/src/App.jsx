@@ -17,6 +17,7 @@ import Results from "./Results.jsx";
  */
 const initialState = {
   measureTypes: [],
+  history: [],
   selectedType: {},
   unitsToConvert: [],
   selectedUnitToConvert: {},
@@ -38,6 +39,15 @@ function reducer(state, action) {
   switch (action.type) {
     case "SET_MEASURE_TYPES":
       return { ...state, measureTypes: action.payload, selectedType: action.payload[0] };
+    case "SET_HISTORY":
+      return { ...state, history: action.payload };
+    case "ADD_TO_HISTORY":
+      return { ...state, history: [...state.history, action.payload] };
+    case "REMOVE_FROM_HISTORY":
+      return {
+        ...state,
+        history: state.history.filter((_, index) => index !== action.payload),
+      };
     case "SET_SELECTED_TYPE":
       return { ...state, selectedType: action.payload };
     case "SET_UNITS_TO_CONVERT":
@@ -81,6 +91,17 @@ function App() {
       })
       // eslint-disable-next-line no-console
       .catch((error) => console.error("Error fetching the measure types:", error));
+
+    // Get localStorage and set state
+    try {
+      const localHistory = localStorage.getItem("localHistory");
+      if (localHistory) {
+        dispatch({ type: "SET_HISTORY", payload: JSON.parse(localHistory) });
+      }
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log("Error in LocalStorage:", error);
+    }
   }, []);
 
   // useEffect hook to update state when selectedType changes
@@ -137,6 +158,14 @@ function App() {
     }
   }, [state.shouldFocus]);
 
+  // Set localStorage every time that history changes
+  useEffect(() => {
+    if (state.history.length > 0) {
+      console.log(state.history);
+      localStorage.setItem("localHistory", JSON.stringify(state.history));
+    }
+  }, [state.history]);
+
   /**
    * Sets the value of the input and updates the converter and target values accordingly.
    *
@@ -156,7 +185,6 @@ function App() {
         setType={(type) => dispatch({ type: "SET_SELECTED_TYPE", payload: type })}
         types={state.measureTypes}
       />
-
       <input
         type="number"
         className="input-converter"
@@ -166,31 +194,31 @@ function App() {
         onFocus={() => dispatch({ type: "SET_SHOULD_FOCUS", payload: true })}
         ref={inputElementRef}
       />
-
       <UnitSelector
         units={state.unitsToConvert}
         setUnit={(unit) => dispatch({ type: "SET_SELECTED_UNIT_TO_CONVERT", payload: unit })}
         selected={state.selectedUnitToConvert && state.selectedUnitToConvert.name}
       />
-
       <span> to </span>
-
       <UnitSelector
         units={state.unitsToTarget}
         setUnit={(unit) => dispatch({ type: "SET_SELECTED_UNIT_TO_TARGET", payload: unit })}
         selected={state.selectedUnitToTarget && state.selectedUnitToTarget[0]}
       />
-
       <Results
         data={{
+          category: state.selectedType.type,
           inputConverter: state.inputConverter,
           inputTarget: state.inputTarget,
-          selectedUnitToConvert: state.selectedUnitToConvert,
-          selectedUnitToTarget: state.selectedUnitToTarget,
+          selectedUnitToConvert: state.selectedUnitToConvert.name,
+          selectedUnitToTarget: state.selectedUnitToTarget[0],
         }}
+        setHistory={(data) => dispatch({ type: "ADD_TO_HISTORY", payload: data })}
       />
     </>
   );
 }
+
+// deteleHistory={(index) => dispatch({ type: "REMOVE_FROM_HISTORY", payload: index })}
 
 export default App;
