@@ -2,6 +2,7 @@ import { useReducer, useEffect, useRef } from "react";
 import MeasureTypesSelector from "./MeasureTypesSelector.jsx";
 import UnitSelector from "./UnitSelector.jsx";
 import Results from "./Results.jsx";
+import History from "./History.jsx";
 
 /**
  * Initial state of the application.
@@ -161,8 +162,9 @@ function App() {
   // Set localStorage every time that history changes
   useEffect(() => {
     if (state.history.length > 0) {
-      console.log(state.history);
       localStorage.setItem("localHistory", JSON.stringify(state.history));
+    } else {
+      localStorage.clear();
     }
   }, [state.history]);
 
@@ -214,6 +216,11 @@ function App() {
           selectedUnitToTarget: state.selectedUnitToTarget[0],
         }}
         setHistory={(data) => dispatch({ type: "ADD_TO_HISTORY", payload: data })}
+      />
+
+      <History
+        dataHistory={state.history}
+        removeHistory={(index) => dispatch({ type: "REMOVE_FROM_HISTORY", payload: index })}
       />
     </>
   );
