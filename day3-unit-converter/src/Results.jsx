@@ -1,8 +1,18 @@
+/**
+ * Results Component
+ *
+ * This component displays the conversion results and provides options to copy the result to the clipboard or save it.
+ *
+ * Props:
+ * - `data`: Object containing the conversion data.
+ * - `setHistory`: Function to save the conversion result to history.
+ */
+
 export default function Results({ data, setHistory }) {
   const { inputConverter, inputTarget, selectedUnitToConvert, selectedUnitToTarget } = data;
 
   /**
-   * Copies the value of the inputTargetRef to the clipboard.
+   * Copies the value of the inputTarget to the clipboard.
    *
    * @async
    * @function copyToClipboard
@@ -18,6 +28,7 @@ export default function Results({ data, setHistory }) {
     }
   }
 
+  // Saves the current conversion result to history
   function save() {
     setHistory(data);
   }
