@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useRef, useState } from "react";
+import { useReducer, useEffect, useRef } from "react";
 import MeasureTypesSelector from "./MeasureTypesSelector.jsx";
 import UnitSelector from "./UnitSelector.jsx";
 import Results from "./Results.jsx";
@@ -24,6 +24,7 @@ const initialState = {
   selectedUnitToTarget: {},
   inputConverter: 1,
   inputTarget: 0,
+  shouldFocus: true,
 };
 
 /**
@@ -51,6 +52,8 @@ function reducer(state, action) {
       return { ...state, inputConverter: action.payload };
     case "SET_INPUT_TARGET":
       return { ...state, inputTarget: action.payload };
+    case "SET_SHOULD_FOCUS":
+      return { ...state, shouldFocus: action.payload };
     default:
       return state;
   }
@@ -67,7 +70,6 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const inputConverterRef = useRef(1);
   const inputElementRef = useRef(null);
-  const [shouldFocus, setShouldFocus] = useState(true);
 
   // Get initial data from db and set initial value for measureTypes
   // and selectedMeasureTypes
@@ -85,9 +87,9 @@ function App() {
   // If selectedType has units, dispatch actions to set units and conversions in the state
   useEffect(() => {
     if (state.selectedType.units) {
-      setShouldFocus(true);
       const units = state.selectedType.units;
       const conversions = Object.entries(units[0].conversions);
+      dispatch({ type: "SET_SHOULD_FOCUS", payload: true });
       dispatch({ type: "SET_UNITS_TO_CONVERT", payload: units });
       dispatch({ type: "SET_UNITS_TO_TARGET", payload: conversions });
       dispatch({ type: "SET_SELECTED_UNIT_TO_CONVERT", payload: units[0] });
@@ -129,11 +131,11 @@ function App() {
 
   // useEffect hook to keep the input focused
   useEffect(() => {
-    if (shouldFocus && inputElementRef.current) {
+    if (state.shouldFocus && inputElementRef.current) {
       inputElementRef.current.focus();
       inputElementRef.current.select();
     }
-  }, [shouldFocus]);
+  }, [state.shouldFocus]);
 
   /**
    * Sets the value of the input and updates the converter and target values accordingly.
@@ -145,7 +147,7 @@ function App() {
     const value = e.target.value;
     dispatch({ type: "SET_INPUT_CONVERTER", payload: value });
     dispatch({ type: "SET_INPUT_TARGET", payload: value * state.selectedUnitToTarget[1] });
-    setShouldFocus(false);
+    dispatch({ type: "SET_SHOULD_FOCUS", payload: false });
   }
 
   return (
@@ -161,7 +163,7 @@ function App() {
         min={1}
         value={state.inputConverter}
         onChange={setValue}
-        onFocus={() => setShouldFocus(true)}
+        onFocus={() => dispatch({ type: "SET_SHOULD_FOCUS", payload: true })}
         ref={inputElementRef}
       />
 
