@@ -56,13 +56,6 @@ function reducer(state, action) {
   }
 }
 
-/**
- * Reducer hook for managing state in the App component.
- *
- * @param {function} reducer - The reducer function for updating state.
- * @param {object} initialState - The initial state object.
- * @returns {array} - An array containing the current state and a dispatch function.
- */
 function App() {
   /**
    * Reducer hook for managing state in the App component.
@@ -72,13 +65,9 @@ function App() {
    * @returns {array} - An array containing the current state and a dispatch function.
    */
   const [state, dispatch] = useReducer(reducer, initialState);
-  const inputConverterRef = useRef(state.inputConverter);
+  const inputConverterRef = useRef(1);
   const inputElementRef = useRef(null);
   const [shouldFocus, setShouldFocus] = useState(true);
-
-  useEffect(() => {
-    inputConverterRef.current = state.inputConverter;
-  }, [state.inputConverter]);
 
   // Get initial data from db and set initial value for measureTypes
   // and selectedMeasureTypes
