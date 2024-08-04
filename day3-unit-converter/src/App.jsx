@@ -193,6 +193,7 @@ function App() {
           selectedUnitToConvert: state.selectedUnitToConvert.name,
           selectedUnitToTarget: state.selectedUnitToTarget[0],
         }}
+        history={state.history}
         setHistory={(data) => dispatch({ type: "ADD_TO_HISTORY", payload: data })}
       />
 

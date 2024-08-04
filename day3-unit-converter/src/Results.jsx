@@ -8,7 +8,7 @@
  * - `setHistory`: Function to save the conversion result to history.
  */
 
-export default function Results({ data, setHistory }) {
+export default function Results({ data, setHistory, history }) {
   const { inputConverter, inputTarget, selectedUnitToConvert, selectedUnitToTarget } = data;
 
   /**
@@ -30,7 +30,20 @@ export default function Results({ data, setHistory }) {
 
   // Saves the current conversion result to history
   function save() {
-    setHistory(data);
+    // avoid repeated entries in saved history
+    if (
+      !history.filter(
+        (item) =>
+          selectedUnitToConvert === item.selectedUnitToConvert &&
+          selectedUnitToTarget === item.selectedUnitToTarget &&
+          inputConverter === item.inputConverter,
+      ).length > 0
+    ) {
+      setHistory(data);
+      alert("New conversion added!");
+    } else {
+      alert("Already in history!");
+    }
   }
 
   return (
