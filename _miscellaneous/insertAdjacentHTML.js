@@ -1,0 +1,1 @@
+// targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
