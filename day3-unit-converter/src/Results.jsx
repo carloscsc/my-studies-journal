@@ -1,3 +1,4 @@
+import { FaSave, FaClipboard } from "react-icons/fa";
 /**
  * Results Component
  *
@@ -49,18 +50,21 @@ export default function Results({ data, setHistory, history }) {
   return (
     <>
       <div className="results">
-        {inputConverter} {selectedUnitToConvert} is equal to
-        <input type="text" className="input-target" value={inputTarget} readOnly />
-        {selectedUnitToTarget}
-      </div>
-
-      <div className="actions">
-        <button type="button" onClick={copyToClipboard}>
-          Copy
-        </button>
-        <button type="button" onClick={save}>
-          Save result
-        </button>
+        <div className="display-result">
+          <strong>
+            {inputConverter} {selectedUnitToConvert}
+          </strong>{" "}
+          is equal to{" "}
+          <strong>
+            {inputTarget} {selectedUnitToTarget}
+          </strong>
+          <button type="button" onClick={copyToClipboard}>
+            <FaClipboard />
+          </button>
+          <button type="button" onClick={save}>
+            <FaSave />
+          </button>
+        </div>
       </div>
     </>
   );

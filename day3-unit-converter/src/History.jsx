@@ -24,7 +24,7 @@ export default function History({ dataHistory, removeHistory }) {
 
   return (
     <>
-      <h2>Your saved Conversions</h2>
+      <h2 className="history-title">Your saved Conversions</h2>
 
       {Object.keys(groupedData).length > 0 ? (
         Object.keys(groupedData).map((category) => (

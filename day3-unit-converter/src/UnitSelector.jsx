@@ -10,7 +10,7 @@
  * - `selected`: The currently selected unit.
  */
 
-export default function UnitSelector({ units, setUnit, selected }) {
+export default function UnitSelector({ units, setUnit, selected, className }) {
   // Handles the change event for the dropdown
   const handleChange = (e) => {
     const selectedOptionIndex = e.target.selectedIndex;
@@ -19,7 +19,7 @@ export default function UnitSelector({ units, setUnit, selected }) {
 
   return (
     <>
-      <select onChange={handleChange} value={selected}>
+      <select className={className} onChange={handleChange} value={selected}>
         {units &&
           units.map((unit, i) => (
             <option

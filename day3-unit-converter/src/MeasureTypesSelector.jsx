@@ -17,8 +17,12 @@ export default function MeasureTypesSelector({ types, setType }) {
 
   return (
     <div className="measure-type-selector">
-      <label htmlFor="measure-type">Measure Types</label>
-      <select id="measure-type" name="measure-type" onChange={handleChange}>
+      <select
+        className="measure-type"
+        id="measure-type"
+        name="measure-type"
+        onChange={handleChange}
+      >
         {types.map((type, index) => (
           <option key={index} value={index}>
             {type.type}
