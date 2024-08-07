@@ -153,55 +153,60 @@ function App() {
   }
 
   return (
-    <>
-      <MeasureTypesSelector
-        setType={(type) => dispatch({ type: "SET_SELECTED_TYPE", payload: type })}
-        types={state.measureTypes}
-      />
+    <div className="container">
 
-      <input
-        type="number"
-        className="input-converter"
-        min={1}
-        value={state.inputConverter}
-        onChange={setValue}
-        onFocus={() => dispatch({ type: "SET_SHOULD_FOCUS", payload: true })}
-        ref={inputElementRef}
-      />
+      <div className="measure-wrap">
+        <MeasureTypesSelector
+          setType={(type) => dispatch({ type: "SET_SELECTED_TYPE", payload: type })}
+          types={state.measureTypes}
+        />
 
-      <UnitSelector
-        units={state.unitsToConvert}
-        setUnit={(unit) => dispatch({ type: "SET_SELECTED_UNIT_TO_CONVERT", payload: unit })}
-        selected={state.selectedUnitToConvert && state.selectedUnitToConvert.name}
-      />
+        <input
+          type="number"
+          className="input-converter"
+          min={1}
+          value={state.inputConverter}
+          onChange={setValue}
+          onFocus={() => dispatch({ type: "SET_SHOULD_FOCUS", payload: true })}
+          ref={inputElementRef}
+        />
 
-      <br />
-      <span> -to- </span>
-      <br />
+        <UnitSelector
+          units={state.unitsToConvert}
+          setUnit={(unit) => dispatch({ type: "SET_SELECTED_UNIT_TO_CONVERT", payload: unit })}
+          selected={state.selectedUnitToConvert && state.selectedUnitToConvert.name}
+        />
 
-      <UnitSelector
-        units={state.unitsToTarget}
-        setUnit={(unit) => dispatch({ type: "SET_SELECTED_UNIT_TO_TARGET", payload: unit })}
-        selected={state.selectedUnitToTarget && state.selectedUnitToTarget[0]}
-      />
+        <br />
+        <span> -to- </span>
+        <br />
 
-      <Results
-        data={{
-          category: state.selectedType.type,
-          inputConverter: state.inputConverter,
-          inputTarget: state.inputTarget,
-          selectedUnitToConvert: state.selectedUnitToConvert.name,
-          selectedUnitToTarget: state.selectedUnitToTarget[0],
-        }}
-        history={state.history}
-        setHistory={(data) => dispatch({ type: "ADD_TO_HISTORY", payload: data })}
-      />
+        <UnitSelector
+          units={state.unitsToTarget}
+          setUnit={(unit) => dispatch({ type: "SET_SELECTED_UNIT_TO_TARGET", payload: unit })}
+          selected={state.selectedUnitToTarget && state.selectedUnitToTarget[0]}
+        />
 
-      <History
-        dataHistory={state.history}
-        removeHistory={(index) => dispatch({ type: "REMOVE_FROM_HISTORY", payload: index })}
-      />
-    </>
+        <Results
+          data={{
+            category: state.selectedType.type,
+            inputConverter: state.inputConverter,
+            inputTarget: state.inputTarget,
+            selectedUnitToConvert: state.selectedUnitToConvert.name,
+            selectedUnitToTarget: state.selectedUnitToTarget[0],
+          }}
+          history={state.history}
+          setHistory={(data) => dispatch({ type: "ADD_TO_HISTORY", payload: data })}
+        />
+      </div>
+
+      <div className="history-wrap">
+        <History
+          dataHistory={state.history}
+          removeHistory={(index) => dispatch({ type: "REMOVE_FROM_HISTORY", payload: index })}
+        />
+      </div>
+    </div>
   );
 }
 
