@@ -50,18 +50,47 @@ const spices = [
   { name: "Victoria", nickname: "Posh" },
 ];
 
-/** MAP */
+/**
+ * MAP
+ * Use when you need to loop through each item of array
+ * and do something
+ *
+ * Will return whatever you determine
+ * */
 // short way, reduce and return
-const nickname1 = spices.map((s) => s.name);
-nickname1; //?
+const names = spices.map((s) => s.name);
+names; //?
+
+// return only nicknames
+const nicknames = spices.map((s) => s.nickname);
+nicknames; //?
 
 // other way
 spices.map((spice, index) => {
   console.log(`${index} | ${spice.name}`);
 });
 
-/** FILTER */
+/**
+ * FILTER
+ * User when you need to get some item from a array
+ *
+ * Will return a new array with true values
+ * */
 const namesWithoutSpace = spices.filter((s) => !/[\s]/.test(s.name));
 namesWithoutSpace; //?
 
-/** REDUCE */
+let nameEndsWithY = spices.filter((e) => /[y]/gi.test(e.nickname));
+nameEndsWithY; //?
+
+// return only Posh
+const posh = spices.filter((e) => e.nickname === "Posh");
+posh; //?
+
+/**
+ * Spread
+ */
+const newSpice = [...spices, { name: "One More Girl", nickname: "OMG!!" }];
+newSpice; //?
+
+const omg = newSpice.filter((e) => e.nickname === "OMG!!");
+omg; //?
