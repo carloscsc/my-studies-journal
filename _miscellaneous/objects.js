@@ -129,7 +129,11 @@ objectC; //?
 
 // Object are mutable
 let object1 = { value: 10 };
+
+// now these two objects hold a reference to the same point of
+// of the memory, so change one will affect the other
 let object2 = object1;
+
 let object3 = { value: 10 };
 object1; //?
 object2; //?
@@ -141,6 +145,8 @@ object1 === object3; //?
 object1.value == object3.value; //?
 
 // the value of object 2 will change
+// because object1 and object2 are sharing the same reference in the memory
+// for value property
 object1.value = 15;
 object2; //?
 
@@ -151,6 +157,30 @@ object3.value = 0;
 object3.otherValue = 15; //?
 object3.anotherValue = 15; //?
 
+// cloning objects
+const systemUser = {
+  name: "Carlos",
+  isAdmin: true,
+};
+systemUser.name; //?
+
+// get all properties of systemUser
+let subscriber = Object.assign({}, systemUser);
+
+subscriber; //?
+subscriber.name = "John";
+subscriber; //?
+
+// Then, system user will not change
+systemUser; //?
+
+// other way to clone user spread
+editorUser = { ...subscriber };
+editorUser; //?
+editorUser.name = "Michael";
+// so data will not change
+editorUser; //?
+subscriber; //?
 /**
  * Function for deep compare one object to another
  * @param {Object} obj1
@@ -183,6 +213,3 @@ function deepEqual(obj1, obj2) {
 
 deepEqual(object1, object2); //?
 deepEqual(object1, object3); //?
-
-/** BUILD-IN  OBJECTS */
-// or global objects
