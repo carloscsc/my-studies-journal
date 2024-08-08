@@ -4,7 +4,7 @@
  * This component displays a list of saved conversions grouped by category.
  * Each conversion can be removed using the provided removeHistory function.
  *
- * Props:
+ * Props::
  * - `dataHistory`: Array of conversion history objects.
  * - `removeHistory`: Function to remove a specific conversion by index.
  */
