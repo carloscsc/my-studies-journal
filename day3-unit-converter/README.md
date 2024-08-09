@@ -6,9 +6,26 @@ _[IN PROGRESS]_
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-This project was created as a way to learn and improve my skills in React. The goal is to create a unit converter, similar to the one you find on Google when searching for a specific measurement conversion.
+[[SEE IN ACTION]](https://my-study-journal.vercel.app/day3-unit-converter/dist/)
 
-The project is still in development, and more details will be added soon. If you want to download and run what has been done so far, follow the steps below:
+
+This project was created to develop a unit conversion application, similar to the one embedded in Google Search.
+
+## Key Features
+
+One of the primary goals was to ensure that when switching between measurement types or units, the form would dynamically and responsively update the options in each `select` field as well as the corresponding conversion value.
+
+To achieve this, I utilized `useReducer` and `useEffect` for state management and handling state changes, avoiding potential pitfalls like "useState hell" and unnecessary re-renders.
+
+Additionally, I implemented `useRef` to create unique references for the input fields, which made it easier to manage and maintain their integrity with each state change.
+
+## Historical Data Feature
+
+Although maintaining a history of conversions may not be essential in real-world scenarios, it provided a valuable opportunity to practice array manipulation and working with `localStorage`.
+
+## Future Improvements
+
+There are undoubtedly more efficient ways to build this application, and I am committed to continuing my studies to discover and implement them!
 
 ## Installation
 
@@ -71,3 +88,7 @@ Studies projects, drafts, etc.. are localized on [\_studies](./_studies) folder
 - [React.dev/Learn](https://react.dev/learn)
 - [React.dev/Learn/Tutorial: Tic-Tac-Toe](https://react.dev/learn/tutorial-tic-tac-toe) (#see [Tic-Tac-Toe [repo]](./_studies/tic-tac-toe) | [[see in action]](https://my-study-journal.vercel.app/day3-unit-converter/_studies/tic-tac-toe/dist))
 - [Typechecking With PropTypes](https://legacy.reactjs.org/docs/typechecking-with-proptypes.html)
+
+## About the Dist Folder
+
+In this project, the `dist` folder was included directly in the main `main` branch of the repository, which is generally not a good practice. Ideally, it should be separated into a dedicated production branch, and the `dist` folder should be ignored in the repository's `.gitignore` file. The reason for following this anti-pattern here is that this is a subfolder of a main repository hosted entirely on Vercel. This is the simplest way (that I know of for now) to deploy all the projects in the repository simultaneously without additional configuration. Since these projects are meant for learning and not production, the deployment doesn't need to be more sophisticated or technical. Keeping it simple is often the best approach. (in most cases)
