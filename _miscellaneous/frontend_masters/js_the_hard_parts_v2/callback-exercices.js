@@ -344,38 +344,65 @@ console.log(goodKeys(sunny, startsWithBird)); //?
 // should log: ['charlie', 'dee']
 
 /** Challenge 17 */
-function commutative(func1, func2, value) {}
+function commutative(func1, func2, value) {
+  return func2(func1(value)) === func1(func2(value))
+}
 
 // /*** Uncomment these to check your work! ***/
-// const multBy3 = n => n * 3;
-// const divBy4 = n => n / 4;
-// const subtract5 = n => n - 5;
-// console.log(commutative(multBy3, divBy4, 11)); // should log: true
-// console.log(commutative(multBy3, subtract5, 10)); // should log: false
-// console.log(commutative(divBy4, subtract5, 48)); // should log: false
+const multBy3 = n => n * 3;
+const divBy4 = n => n / 4;
+const subtract5 = n => n - 5;
+console.log(commutative(multBy3, divBy4, 11)); // should log: true
+console.log(commutative(multBy3, subtract5, 10)); // should log: false
+console.log(commutative(divBy4, subtract5, 48)); // should log: false
 
 /** Challenge 18 */
-function objFilter(obj, callback) {}
+function objFilter(obj, callback) {
+  const output = {}
+
+  for(let key in obj) {
+    callback(key) //?
+    obj[key] //?
+
+    if(obj[key] === callback(key)) {
+      output[key] = obj[key]
+    }
+      
+  }
+
+  return output;
+}
 
 // /*** Uncomment these to check your work! ***/
-// const startingObj = {};
-// startingObj[6] = 3;
-// startingObj[2] = 1;
-// startingObj[12] = 4;
-// const half = n => n / 2;
-// console.log(objFilter(startingObj, half)); // should log: { 2: 1, 6: 3 }
+const startingObj = {};
+startingObj[6] = 3;
+startingObj[2] = 1;
+startingObj[12] = 4;
+const half = n => n / 2;
+console.log(objFilter(startingObj, half)); 
+// should log: { 2: 1, 6: 3 }
 
 /** Challenge 19 */
-function rating(arrOfFuncs, value) {}
+function rating(arrOfFuncs, value) {
+  let count = 0
+
+  for(let i = 0; i<arrOfFuncs.length; i++) {
+    arrOfFuncs[i](value) && count++ 
+  }
+
+  return count / arrOfFuncs.length * 100 
+}
 
 // /*** Uncomment these to check your work! ***/
-// const isEven = n => n % 2 === 0;
-// const greaterThanFour = n => n > 4;
-// const isSquare = n => Math.sqrt(n) % 1 === 0;
-// const hasSix = n => n.toString().includes('6');
-// const checks = [isEven, greaterThanFour, isSquare, hasSix];
-// console.log(rating(checks, 64)); // should log: 100
-// console.log(rating(checks, 66)); // should log: 75
+const isEven = n => n % 2 === 0;
+const greaterThanFour = n => n > 4;
+const isSquare = n => Math.sqrt(n) % 1 === 0;
+const hasSix = n => n.toString().includes('6');
+const checks = [isEven, greaterThanFour, isSquare, hasSix];
+console.log(rating(checks, 64)); 
+// should log: 100
+console.log(rating(checks, 66)); 
+// should log: 75
 
 /** Challenge 20 */
 function pipe(arrOfFuncs, value) {}
