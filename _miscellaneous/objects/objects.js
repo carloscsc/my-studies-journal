@@ -213,3 +213,66 @@ function deepEqual(obj1, obj2) {
 
 deepEqual(object1, object2); //?
 deepEqual(object1, object3); //?
+
+//cloning objects
+let clone = {};
+
+for (let key in user) {
+  clone[key] = user[key];
+}
+
+console.log(clone);
+clone.name = "John";
+console.log(clone);
+console.log(user.name);
+user.name = "Richard";
+console.log(clone);
+
+// Other method is use assign, it'll merge the empty array with the key and value
+// of a source array
+const secondClone = {};
+Object.assign(secondClone, user);
+console.log(secondClone);
+user.name = "Pablo";
+secondClone.name = "Peter";
+console.log(secondClone);
+
+const colorPalet = {
+  whitColors: ["whit", "sky blue"],
+};
+
+const blackColors = ["grey", "deep dark"];
+
+Object.assign(colorPalet, { blackColors: blackColors });
+console.log(colorPalet);
+
+let person = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50,
+  },
+};
+
+let clonePerson = Object.assign({}, person);
+
+console.log(person.sizes === clonePerson.sizes); // true, same object
+
+// person and clone share sizes
+// In this case, person and clonePerson, are sharing the same spot in the memory
+// So change one will reflect in another
+person.sizes.width = 60;
+person.name = "Carlos"; // change a property from one place
+console.log(clonePerson.name);
+console.log(clonePerson.sizes.width);
+
+// Using a structuredClone
+// Clone objects with all nested properties
+ClonePerson2 = structuredClone(person); // https://developer.mozilla.org/en-US/docs/Web/API/structuredClone
+
+person.sizes.width = 80;
+person.name = "Carlos";
+
+// now the changes in Person aren't reflected on ClonePerson2
+console.log(ClonePerson2.name);
+console.log(ClonePerson2.sizes.width);
