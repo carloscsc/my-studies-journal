@@ -1,3 +1,5 @@
+// list: http://csbin.io/callbacks
+
 // Type JavaScript here and click "Run Code" or press Ctrl + s
 console.log("Hello, world!");
 
@@ -134,15 +136,62 @@ console.log(
 // should log: [5, 10, 15, 88, 1, 7, 100]
 
 // Challenge 9
-function objOfMatches(array1, array2, callback) {}
+function objOfMatches(array1, array2, callback) {
+  const obj = {};
+  console.log(array1);
+  console.log(array2);
 
-// console.log(objOfMatches(['hi', 'howdy', 'bye', 'later', 'hello'], ['HI', 'Howdy', 'BYE', 'LATER', 'hello'], function(str) { return str.toUpperCase(); }));
+  array1.map((item, i) => {
+    if (callback(item) === array2[i]) {
+      Object.assign(obj, { [item]: array2[i] });
+    }
+  });
+
+  return obj;
+}
+
+console.log(
+  objOfMatches(
+    ["hi", "howdy", "bye", "later", "hello"],
+    ["HI", "Howdy", "BYE", "LATER", "hello"],
+    function (str) {
+      return str.toUpperCase();
+    }
+  )
+);
 // should log: { hi: 'HI', bye: 'BYE', later: 'LATER' }
 
 // Challenge 10
-function multiMap(arrVals, arrCallbacks) {}
+function multiMap(arrVals, arrCallbacks) {
+  let output = {};
 
-// console.log(multiMap(['catfood', 'glue', 'beer'], [function(str) { return str.toUpperCase(); }, function(str) { return str[0].toUpperCase() + str.slice(1).toLowerCase(); }, function(str) { return str + str; }]));
+  for (let i in arrVals) {
+    output[arrVals[i]] = [];
+
+    for (let cb of arrCallbacks) {
+      output[arrVals[i]].push(cb(arrVals[i]));
+    }
+  }
+
+  return output;
+}
+
+console.log(
+  multiMap(
+    ["catfood", "glue", "beer"],
+    [
+      function (str) {
+        return str.toUpperCase();
+      },
+      function (str) {
+        return str[0].toUpperCase() + str.slice(1).toLowerCase();
+      },
+      function (str) {
+        return str + str;
+      },
+    ]
+  )
+);
 // should log: { catfood: ['CATFOOD', 'Catfood', 'catfoodcatfood'], glue: ['GLUE', 'Glue', 'glueglue'], beer: ['BEER', 'Beer', 'beerbeer'] }
 
 // Challenge 11
