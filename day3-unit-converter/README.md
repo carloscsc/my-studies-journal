@@ -1,5 +1,3 @@
-_[IN PROGRESS]_
-
 # Day 3: Unit Converter
 
 **Note:** This repository is part of a personal project called [my-studies-journal](https://github.com/carloscsc/my-studies-journal). The goal is to organize the code, study materials, and personal projects I use daily. For more details, please visit the main page of the repository.
