@@ -8,6 +8,7 @@ _[IN PROGRESS]_
 
 [[SEE IN ACTION]](https://my-study-journal.vercel.app/day3-unit-converter/dist/)
 
+![img.png](img.png)
 
 This project was created to develop a unit conversion application, similar to the one embedded in Google Search.
 
@@ -59,7 +60,7 @@ There are undoubtedly more efficient ways to build this application, and I am co
 
    (**Note:** After these steps, GitHub will copy only the folder of this project. However, the original folder structure will be maintained. If you wish, you can copy just this folder `my-studies-journal` to another directory and ignore all other files downloaded outside this folder)
 
-   You may also want to delete the [\_studies](./_studies/) folder, as it is not part of the project and exists only for my references.
+   You may also want to delete the [\_studies](./_studies) folder, as it is not part of the project and exists only for my references.
 
 7. Install the dependencies
    ```sh
