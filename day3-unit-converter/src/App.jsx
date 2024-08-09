@@ -64,7 +64,7 @@ function App() {
 
   // Fetch measure types and local history from storage
   useEffect(() => {
-    fetch("/data.json")
+    fetch("https://my-study-journal.vercel.app/day3-unit-converter/dist/data.json")
       .then((response) => response.json())
       .then((data) => {
         dispatch({ type: "SET_MEASURE_TYPES", payload: data.measureTypes });
