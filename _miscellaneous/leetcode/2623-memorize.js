@@ -8,17 +8,15 @@ function memoize(fn) {
   let cache = {};
 
   return function (...args) {
-    const func = JSON.stringify(fn.toString() + args);
-    const arguments = args.toString(); //?
+    const key = JSON.stringify(args);
 
-    if (cache[func] && cache[func].arguments === arguments) {
-      return cache[func].res;
+    if (key in cache) {
+      return cache[key];
     }
 
-    const res = fn(...args);
-    cache[func] = { arguments, res };
+    cache[key] = fn(...args);
 
-    return res;
+    return cache[key];
   };
 }
 
