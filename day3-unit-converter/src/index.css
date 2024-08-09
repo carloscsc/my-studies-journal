@@ -164,12 +164,30 @@ input {
 .history-title {
     text-align: center;
     font-size: 16px;
-    border-bottom: 1px solid darkgrey;
+    border-bottom: 1px solid darkgoldenrod;
     padding: 10px;
     margin-bottom: 20px;
-    color: #333333;
+    color: darkgoldenrod;
 }
 
 .history-wrap h3 {
-
+    color: darkgoldenrod;
+    font-weight: bold;
 }
+    .history-wrap p {
+        padding-left: 20px;
+        line-height: 36px;
+        color: #333333;
+    }
+
+        .history-wrap p button {
+            display: inline-block;
+            border: none;
+            background: none;
+            margin-left: 10px;
+            cursor: pointer;
+            color: darkred;
+        }
+        .history-wrap p button:hover {
+            color: red;
+        }

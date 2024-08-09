@@ -41,9 +41,8 @@ export default function Results({ data, setHistory, history }) {
       ).length > 0
     ) {
       setHistory(data);
-      alert("New conversion added!");
     } else {
-      alert("Already in history!");
+      alert("The item is already saved in your history");
     }
   }
 

@@ -1,10 +1,11 @@
+import { FaDeleteLeft } from "react-icons/fa6";
 /**
  * History Component
  *
  * This component displays a list of saved conversions grouped by category.
  * Each conversion can be removed using the provided removeHistory function.
  *
- * Props::
+ * Props:
  * - `dataHistory`: Array of conversion history objects.
  * - `removeHistory`: Function to remove a specific conversion by index.
  */
@@ -31,20 +32,23 @@ export default function History({ dataHistory, removeHistory }) {
           <div key={category}>
             <h3>{category}</h3>
             {groupedData[category].map((item) => (
-              <div key={item.index}>
-                <p>
-                  {item.inputConverter} {item.selectedUnitToConvert} is equal to {item.inputTarget}{" "}
-                  {item.selectedUnitToTarget}
-                </p>
+              <p key={item.index}>
+                <strong>
+                  {item.inputConverter} {item.selectedUnitToConvert}
+                </strong>{" "}
+                is equal to{" "}
+                <strong>
+                  {item.inputTarget} {item.selectedUnitToTarget}
+                </strong>
                 <button type="button" onClick={() => handleClick(item.index)}>
-                  Delete
+                  <FaDeleteLeft />
                 </button>
-              </div>
+              </p>
             ))}
           </div>
         ))
       ) : (
-        <p>You don't have any saved conversions yet.</p>
+        <p>You have no saved conversions</p>
       )}
     </>
   );
