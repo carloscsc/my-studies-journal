@@ -276,3 +276,19 @@ person.name = "Carlos";
 // now the changes in Person aren't reflected on ClonePerson2
 console.log(ClonePerson2.name);
 console.log(ClonePerson2.sizes.width);
+
+// check is object is empty 
+function isEmpty(obj) {
+  for(key in obj) {
+    return false
+  }
+
+  return true
+}
+
+const any = {
+
+}
+
+console.log(isEmpty(user))
+console.log(isEmpty(any))
