@@ -234,9 +234,9 @@ function majority(array, callback) {
 }
 
 // /*** Uncomment these to check your work! ***/
-const isOdd = function(num) { return num % 2 === 1; };
-console.log(majority([1, 2, 3, 4, 5], isOdd)); // should log: true
-console.log(majority([2, 3, 4, 5], isOdd)); // should log: false
+// const isOdd = function(num) { return num % 2 === 1; };
+// console.log(majority([1, 2, 3, 4, 5], isOdd)); // should log: true
+// console.log(majority([2, 3, 4, 5], isOdd)); // should log: false
 
 
 
@@ -405,30 +405,58 @@ console.log(rating(checks, 66));
 // should log: 75
 
 /** Challenge 20 */
-function pipe(arrOfFuncs, value) {}
+function pipe(arrOfFuncs, value) {
+  let last = value;
 
-// /*** Uncomment these to check your work! ***/
-// const capitalize = str => str.toUpperCase();
-// const addLowerCase = str => str + str.toLowerCase();
-// const repeat = str => str + str;
-// const capAddlowRepeat = [capitalize, addLowerCase, repeat];
-// console.log(pipe(capAddlowRepeat, 'cat')); // should log: 'CATcatCATcat'
+  for(let i = 0; i < arrOfFuncs.length; i++) {
+      last = arrOfFuncs[i](last)
+  }
+
+  return last;
+}
+
+/*** Uncomment these to check your work! ***/
+const capitalize = str => str.toUpperCase();
+const addLowerCase = str => str + str.toLowerCase();
+const repeat = str => str + str;
+const capAddlowRepeat = [capitalize, addLowerCase, repeat];
+console.log(pipe(capAddlowRepeat, 'cat')); // should log: 'CATcatCATcat'
 
 /** Challenge 21 */
-function highestFunc(objOfFuncs, subject) {}
+function highestFunc(objOfFuncs, subject) {
+  let highest = ""
+  let result = 0;
+
+  for(let key of Object.keys(objOfFuncs)) {
+      const exc = objOfFuncs[key](subject);
+
+      if(exc > result) {
+          result = exc
+          highest = key 
+      }
+
+  }
+
+  return highest
+}
 
 // /*** Uncomment these to check your work! ***/
-// const groupOfFuncs = {};
-// groupOfFuncs.double = n => n * 2;
-// groupOfFuncs.addTen = n => n + 10;
-// groupOfFuncs.inverse = n => n * -1;
-// console.log(highestFunc(groupOfFuncs, 5)); // should log: 'addTen'
-// console.log(highestFunc(groupOfFuncs, 11)); // should log: 'double'
-// console.log(highestFunc(groupOfFuncs, -20)); // should log: 'inverse'
+const groupOfFuncs = {};
+groupOfFuncs.double = n => n * 2;
+groupOfFuncs.addTen = n => n + 10;
+groupOfFuncs.inverse = n => n * -1;
+console.log(highestFunc(groupOfFuncs, 5)); // should log: 'addTen'
+console.log(highestFunc(groupOfFuncs, 11)); // should log: 'double'
+console.log(highestFunc(groupOfFuncs, -20)); // should log: 'inverse'
 
 /** Challenge 22 */
-function combineOperations(startVal, arrOfFuncs) {}
+function combineOperations(startVal, arrOfFuncs) {
+    return pipe(arrOfFuncs, startVal)
+}
 
+function addTen(num) {
+  return num + 10;
+}
 function add100(num) {
   return num + 100;
 }
@@ -441,34 +469,53 @@ function multiplyByThree(num) {
   return num * 3;
 }
 
+function multiplyFive(num) {
+  return num * 5;
+}
+
 // /*** Uncomment these to check your work! ***/
-// console.log(combineOperations(0, [add100, divByFive, multiplyByThree])); // Should output 60 -->
-// console.log(combineOperations(0, [divByFive, multiplyFive, addTen])); // Should output 10
+console.log(combineOperations(0, [add100, divByFive, multiplyByThree])); // Should output 60 -->
+console.log(combineOperations(0, [divByFive, multiplyFive, addTen])); // Should output 10
 
 /** Challenge 23 */
-function myFunc(array, callback) {}
+function myFunc(array, callback) {
+  let output = -1;
+
+  for(let i = 0; i < array.length; i++) {
+    callback(array[i]) && (output = i); 
+  }
+
+  return output; 
+}
 
 const numbers = [2, 3, 6, 64, 10, 8, 12];
 const evens = [2, 4, 6, 8, 10, 12, 64];
 
-// function isOdd(num) {
-//   return num % 2 !== 0;
-// }
-
-// /*** Uncomment these to check your work! ***/
-// console.log(myFunc(numbers, isOdd)); // Output should be 1
-// console.log(myFunc(evens, isOdd)); // Output should be -1
-
-/** Challenge 24 */
-function myForEach(array, callback) {}
-
-let sum = 0;
-
-function addToSum(num) {
-  sum += num;
+function isOdd(num) {
+  return num % 2 !== 0;
 }
 
 // /*** Uncomment these to check your work! ***/
-// const nums = [1, 2, 3];
-// myForEach(nums, addToSum);
-// console.log(sum); // Should output 6
+console.log(myFunc(numbers, isOdd));
+// Output should be 1
+console.log(myFunc(evens, isOdd)); 
+// Output should be -1
+
+/** Challenge 24 */
+function myForEach(array, callback) {
+  for(let i = 0; i < array.length; i++) {
+    callback(array[i])
+  }
+}
+
+
+
+function addToSum(num) {
+  sum += num; //?
+}
+
+// /*** Uncomment these to check your work! ***/
+const nums2 = [1, 2, 3];
+myForEach(nums2, addToSum);
+console.log(sum); 
+// Should output 6
