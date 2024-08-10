@@ -2,6 +2,13 @@
 
 // the value of this is the object "before dot"
 // The one used to call the method.
+// The value of This is defined ate run-time
+
+// When a function is declares, it may use this, but that this has no
+// value until the function is called 
+
+// When a function is called in the “method” syntax: object.method(), 
+// the value of this during the call is object.
 
 let user = {
   name: "John",
@@ -9,13 +16,25 @@ let user = {
 
   // direct to the object 
   sayHi() {
-      console.log(`Hello ${this.name}`)
+      console.log(`Hello ${this.name}`) 
   },
 
 }
 
-user.sayHi = function() {
-  console.log(`${this.name}, you are Welcome`)
+user.sayHi()
+
+let admin = user;
+admin.name = "Peter"
+admin.sayHi()
+
+/** Arrow functions don't have THIS */
+// so they you use parent scope
+let arrowUser = {
+  firstName: "Ilya",
+  sayHi() {
+    let arrow = () => console.log(this.firstName)
+    arrow()
+  }
 }
 
-user.sayHi()
+arrowUser.sayHi() 
