@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/github/carloscsc/my-studies-journal.svg)](https://wakatime.com/badge/github/carloscsc/my-studies-journal)
+
 - [About the Project](#about-the-project)
 - [Repository Structure](#repository-structure)
 - [Miscellaneous](#miscellaneous)
