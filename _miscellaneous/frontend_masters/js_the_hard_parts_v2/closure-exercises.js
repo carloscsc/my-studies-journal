@@ -1,4 +1,5 @@
-// 
+// Exercises: http://csbin.io/closures
+// Response: https://github.com/FrontendMasters/fm-snippets/blob/main/javascript-hard-parts-v2/closures.js˝ß
 
 /** CHALLENGE 1 */
 function createFunction() {
