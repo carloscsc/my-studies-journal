@@ -82,6 +82,9 @@ loadPost()
 console.log("isWaiting is: ", isWaiting);
 
 /** PROMISE WITH RESOLVERS */
+
+// The advantage is that you quem use it outside the callback
+
 const isTrue = true;
 const { promise, resolve, reject } = Promise.withResolvers();
 
@@ -94,3 +97,49 @@ if(isTrue) {
 promise
   .then(value => { console.log(value)} )
   .catch(err => { throw err })
+
+class OneElementQueue {
+  
+  #promise = null;
+  #resolve = null;
+
+  constructor() {
+    const {promise, resolve} = Promise.withResolvers()
+    this.#promise = promise
+    this.#resolve = resolve
+  }
+  get() {
+    return this.#promise
+  }
+  put(value) {
+    this.#resolve(value)
+  }
+}
+
+
+// PUT before GET
+{
+  const queue = new OneElementQueue();
+  queue.put('one')
+
+  queue.get().then(data => {
+    console.log(data)
+  })
+}
+
+
+// GET before PUT
+{
+  const queue = new OneElementQueue()
+
+  setTimeout(
+    () => queue.put('two'),
+    0
+  )
+
+  queue.get().then(data => {
+    console.log(data)
+  })
+
+}
+

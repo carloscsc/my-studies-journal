@@ -41,11 +41,11 @@ const id = createPizzaID();
 /**
  * Adds a new pizza to the menu.
  *
- * @param {string} name - The name of the pizza.
- * @param {number} price - The price of the pizza.
+ * @param {Pizza['name']} name - The name of the pizza.
+ * @param {Pizza['price']} price - The price of the pizza.
  * @return {void}
  */
-function addNewPizza(name: string, price: number): void {
+function addNewPizza(name: Pizza['name'], price: Pizza['price']): void {
   menu.push({id: id(), name, price})
 }
 

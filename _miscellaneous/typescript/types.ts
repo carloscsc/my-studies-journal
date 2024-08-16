@@ -72,8 +72,10 @@ choices = "Option 02"
 
 /** UNIONS */
 type User = {
+  name?: string,
   username: string,
   role: "guest" | "admin" | "member"
+  age?: number
 }
 
 const users: User[] = [
@@ -85,15 +87,56 @@ const users: User[] = [
 /** FUNCTION RETURN TYPE */
 function fetchUserDetails(username: string): User {
   const user = users.find(user => user.username === username)
-  if(!user) {
+  if (!user) {
     throw new Error(`User: ${username} was not found`)
   }
   return user;
 }
-console.log( fetchUserDetails('carlos.cantanzaro').username );
+console.log(fetchUserDetails('carlos.cantanzaro').username);
 
 /** ANY -> never use!!*/
 let value: any = 1
 value = 'any'
 
 /** UTILITY TYPE */
+
+// All the properties was default set as optional  
+type updateUser = Partial<User>
+
+/** OMIT TYPE */
+
+// Select witch properties you want to omit 
+type otherTypeOfUser = Omit<User, "role" | "username">
+
+/** GENERICS */
+
+const gameScore: number[] = [14, 21, 33, 42, 59]
+const favoriteThings: string[] = ['Pizza', 'Books', 'Cars', 'Movies']
+const voters: updateUser[] = [
+  { name: 'Carlos', age: 33 },
+  { name: 'bob', age: 42 }
+]
+
+function getLastItem<T>(array: T[]): T | undefined {
+  return array[array.length - 1]
+}
+
+console.log(typeof getLastItem(gameScore))
+console.log(typeof getLastItem(favoriteThings))
+console.log(typeof getLastItem(voters))
+console.log(typeof getLastItem(users))
+
+function addToArray<T>(array: T[], item: T): T[] {
+  array.push(item)
+  return array;
+}
+
+addToArray(gameScore, 60)
+addToArray(favoriteThings, 'Travel')
+addToArray(voters, { name: 'Michael', age: 32 })
+addToArray(users, { username: 'Michael', role: 'guest' })
+
+console.log(gameScore)
+console.log(favoriteThings)
+console.log(voters)
+console.log(users)
