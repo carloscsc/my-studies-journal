@@ -20,8 +20,8 @@ var sumPromises = async function(promise1, promise2, ...args) {
   const promises = [...arguments]
   let result = 0;
 
-  for(let res of promises) {
-      result += await res;
+  for await (let res of promises) {
+      result += res;
   }
 
   return Promise.resolve(result) 
