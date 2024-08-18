@@ -10,4 +10,5 @@ https://vimeo.com/96425312
 
 https://blog.izs.me/2013/08/designing-apis-for-asynchrony/
 
-#Stops at: https://exploringjs.com/js/book/ch_async-functions.html
+
+See next: https://exploringjs.com/js/book/ch_async-iteration.html
