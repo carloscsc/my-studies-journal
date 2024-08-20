@@ -1,2 +1,2 @@
-1) https://exploringjs.com/js/book/ch_objects.html#ch_objects
+1) https://exploringjs.com/js/book/ch_objects.html#cheat-sheet-objects
    
