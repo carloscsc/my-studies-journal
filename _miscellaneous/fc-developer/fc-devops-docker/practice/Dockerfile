@@ -1,3 +1,5 @@
 FROM ubuntu 
 
-CMD [ "echo", "Hello World" ]
+ENTRYPOINT ["bash"]
+
+# CMD [ "World" ]
