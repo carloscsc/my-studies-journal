@@ -26,20 +26,19 @@ const Router = {
 
     switch (route) {
       case '/':
-        pageElement = document.createElement('h1');
-        pageElement.textContent = 'Home Page';
+        pageElement = document.createElement('menu-page');
 
         break;
 
       case '/order':
-        pageElement = document.createElement('h1');
+        pageElement = document.createElement('order-page');
         pageElement.textContent = 'Order Page';
 
         break;
 
       default:
         if (route.startsWith('products-')) {
-          pageElement = document.createElement('h1');
+          pageElement = document.createElement('details-page');
           pageElement.textContent = 'Details Page';
 
           const paramId = route.substring(route.lastIndexOf('-') + 1);
