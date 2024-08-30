@@ -1,26 +1,20 @@
-version: '3'
-
 services:
-  laravel:
-    build:
-      context: ./laravel
-      dockerfile: Dockerfile.prod
-    image: carloscsc2/laravel:prod
-    container_name: laravel
-    networks:
-      - laranet
+  db:
+    image: mysql:latest
+    platform: linux/arm64
+    container_name: db
+    restart: always
+    tty: true
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: nodedb
+      MYSQL_USER: node
+      MYSQL_ROOT_PASSWORD: nodedb
 
-  nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile.prod
-    image: carloscsc2/nginx-lara:prod
-    container_name: nginx
     networks:
-      - laranet
-    ports:
-      - '8080:80'
+      - node-network
 
 networks:
-  laranet:
+  node-network:
     driver: bridge
