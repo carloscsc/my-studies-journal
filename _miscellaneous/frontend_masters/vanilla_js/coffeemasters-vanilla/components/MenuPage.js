@@ -19,6 +19,26 @@ export class MenuPage extends HTMLElement {
     const template = document.getElementById('menu-page-template');
     const content = template.content.cloneNode(true);
     this.root.appendChild(content);
+
+    window.addEventListener('appmenuchanged', () => {
+      this.render();
+    });
+  }
+
+  render() {
+    if (app.store.menu) {
+      for (let category of app.store.menu) {
+        console.log(category);
+        this.root.innerHTML += `
+          <h3>${category.name}</h3>
+          <ul class="category">
+            ${category.products.map((item) => `<li>${item.name}</li>`).join('')}
+          </ul>
+        `;
+      }
+    } else {
+      this.root.querySelector('#menu').innerHTML = 'Loading...';
+    }
   }
 }
 
