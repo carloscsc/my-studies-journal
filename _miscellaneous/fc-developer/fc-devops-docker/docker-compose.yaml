@@ -1,4 +1,16 @@
 services:
+  app:
+    build:
+      context: node
+    container_name: app
+    networks:
+      - node-network
+    volumes:
+      - ./node:/usr/src/app
+    tty: true
+    ports:
+      - '3000:3000'
+
   db:
     image: mysql:latest
     platform: linux/arm64
@@ -9,7 +21,6 @@ services:
       - ./mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: nodedb
-      MYSQL_USER: node
       MYSQL_ROOT_PASSWORD: nodedb
 
     networks:
