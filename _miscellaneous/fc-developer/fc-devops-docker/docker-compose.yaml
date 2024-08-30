@@ -22,7 +22,8 @@ services:
     environment:
       MYSQL_DATABASE: nodedb
       MYSQL_ROOT_PASSWORD: nodedb
-
+    ports:
+      - '3316:3306'
     networks:
       - node-network
 
