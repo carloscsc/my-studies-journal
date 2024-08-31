@@ -11,8 +11,8 @@ const config = {
 const mysql = require('mysql2');
 const connection = mysql.createConnection(config);
 
-// const sql = `INSERT INTO people(name) values('Wesley')`;
-// connection.query(sql);
+const sql = `INSERT INTO people(name) values('Wesley')`;
+connection.query(sql);
 connection.end();
 
 app.get('/', (req, res) => {
