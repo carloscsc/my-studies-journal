@@ -28,11 +28,16 @@ export class MenuPage extends HTMLElement {
   render() {
     if (app.store.menu) {
       for (let category of app.store.menu) {
-        console.log(category);
+        const products = [];
+
+        for (let items of category.products) {
+          products.push(`<li>${items.name}</li>`);
+        }
+
         this.root.innerHTML += `
           <h3>${category.name}</h3>
           <ul class="category">
-            ${category.products.map((item) => `<li>${item.name}</li>`).join('')}
+            ${products.join('')}
           </ul>
         `;
       }
