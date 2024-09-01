@@ -15,6 +15,15 @@ async function dbConnect() {
       database: 'nodedb',
     });
 
+    // if People not exists, create it
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS people (
+        id INT NOT NULL AUTO_INCREMENT,
+        name VARCHAR(255) NOT NULL,
+        PRIMARY KEY (id)
+      )
+    `);
+
     // Insert name into DB
     await insertName('Carlos');
   } catch (error) {
