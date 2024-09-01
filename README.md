@@ -25,7 +25,13 @@ When a project is in progress, a `[IN PROGRESS]` tag will be added to the top of
 
 ## Miscellaneous
 
-In my day-to-day activities, I consume many articles or tutorials that are not necessarily related to any specific project. Therefore, I created a folder called [\_miscellaneous](./_miscellaneous/README.md) where I will store this material in a somewhat unordered manner, just as a way to archive them.
+In my day-to-day life, I end up studying a lot of things that are not directly related to any project, or that will only become a project in the future.
+
+In addition, I read many articles or tutorials just for personal interest.
+
+That's why I created a folder called [\_miscellaneous](./_miscellaneous/README.md) where I will store this material in a somewhat disorganized way, just as a way of archiving it.
+
+This will probably be the largest folder in the repository, and it's where most of my studies are actually located.
 
 ## About Me
 
