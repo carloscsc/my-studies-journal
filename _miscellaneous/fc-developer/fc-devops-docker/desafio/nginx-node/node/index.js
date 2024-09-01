@@ -9,7 +9,7 @@ let db;
 async function dbConnect() {
   try {
     db = await mysql.createConnection({
-      host: 'mysql',
+      host: 'db',
       user: 'root',
       password: 'nodedb',
       database: 'nodedb',
@@ -72,7 +72,7 @@ app.get('/', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log('Running at port: ' + port);
+  console.log('Running at port: ' + port + 'on nginx');
 });
 
 dbConnect();

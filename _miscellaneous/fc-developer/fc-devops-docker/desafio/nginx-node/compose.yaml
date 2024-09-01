@@ -8,7 +8,7 @@ services:
     networks:
       - nodeapp
     depends_on:
-      mysql:
+      db:
         condition: service_healthy
 
   nginx:
@@ -23,34 +23,24 @@ services:
       - node
     tty: true
 
-  mysql:
-    container_name: mysql
-    image: mysql:latest
+  db:
+    container_name: db
+    image: mariadb:latest
     restart: always
     tty: true
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./data:/var/lib/mysql:Z
     environment:
-      MYSQL_DATABASE: nodedb
-      MYSQL_ROOT_PASSWORD: nodedb
+      MARIADB_DATABASE: nodedb
+      MARIADB_ROOT_PASSWORD: nodedb
     networks:
       - nodeapp
     healthcheck:
-      test:
-        [
-          'CMD',
-          'mysqladmin',
-          'ping',
-          '-h',
-          'localhost',
-          '-u',
-          'root',
-          '-p$$MYSQL_ROOT_PASSWORD',
-        ]
-      interval: 1m30s
-      timeout: 30s
-      retries: 5
-      start_period: 30s
+      test: ['CMD', 'healthcheck.sh', '--connect', '--innodb_initialized']
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
 networks:
   nodeapp:
