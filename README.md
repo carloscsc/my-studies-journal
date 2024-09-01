@@ -19,13 +19,13 @@ The files are organized into folders named `day[n]_project-title`, e.g., `day1-s
 
 Each "Day" represents a project, a starting point for executing an idea, which may take a day, a week, or even a year to complete. Within these folders, there will be a subfolder called `_studies`, representing the "draft" of the project, containing all the materials I developed or executed to complete the main project, akin to the preparation stages for executing the main idea.
 
-Since the primary goal here is to document my studies and projects, each main folder contains a `README.md` file with an explanation of the project and its technologies, documentation when necessary, a link to the project running in production, and a list of articles, courses, and tutorials used during the project with their respective repositories in the `_studies` folder, when applicable.
+Since the main goal here is to document my studies and projects, each main folder contains a `README.md` file with an explanation of the project and its technologies, as well as a link to the project in production. And as possible or necessary a list of articles, courses and tutorials used during the project, with their respective repositories in the `_studies` folder.
 
 When a project is in progress, a `[IN PROGRESS]` tag will be added to the top of the `README.md` file to indicate that the project is not yet completed.
 
 ## Miscellaneous
 
-In my day-to-day activities, I consume many articles or tutorials that are not necessarily related to any specific project. Therefore, I created a folder called `[\_miscellaneous](./_miscellaneous/README.md)` where I will store this material in a somewhat unordered manner, just as a way to archive them.
+In my day-to-day activities, I consume many articles or tutorials that are not necessarily related to any specific project. Therefore, I created a folder called [\_miscellaneous](./_miscellaneous/README.md) where I will store this material in a somewhat unordered manner, just as a way to archive them.
 
 ## About Me
 
