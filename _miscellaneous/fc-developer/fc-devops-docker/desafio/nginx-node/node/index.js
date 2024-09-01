@@ -65,14 +65,13 @@ app.get('/', async (req, res) => {
   res.send(`
     <h1>Full Cycle Rocks!</h1>
     <ul>
-      <p>Names:</p> 
       ${nameList}
     </ul>
   `);
 });
 
 app.listen(port, () => {
-  console.log('Running at port: ' + port + 'on nginx');
+  console.log(`Running at port: ${port} on nginx`);
 });
 
 dbConnect();

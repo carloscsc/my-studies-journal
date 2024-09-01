@@ -3,6 +3,9 @@ services:
     container_name: app
     build:
       context: node
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./node:/usr/src/app
     networks:
       - nodeapp
     depends_on:
@@ -19,6 +22,7 @@ services:
       - nodeapp
     depends_on:
       - node
+    tty: true
 
   db:
     container_name: db
