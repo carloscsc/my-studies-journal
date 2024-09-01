@@ -26,7 +26,6 @@ services:
   mysql:
     container_name: mysql
     image: mysql:latest
-    platform: linux/arm64
     restart: always
     tty: true
     volumes:
