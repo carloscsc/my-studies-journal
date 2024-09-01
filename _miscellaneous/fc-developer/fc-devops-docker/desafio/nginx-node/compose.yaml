@@ -1,0 +1,58 @@
+services:
+  node:
+    container_name: app
+    build:
+      context: node
+    volumes:
+      - ./node:/usr/src/app
+    networks:
+      - nodeapp
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  nginx:
+    container_name: server
+    build:
+      context: nginx
+    ports:
+      - '8080:80'
+    networks:
+      - nodeapp
+    depends_on:
+      - node
+    tty: true
+
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    platform: linux/arm64
+    restart: always
+    tty: true
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: nodedb
+      MYSQL_ROOT_PASSWORD: nodedb
+    networks:
+      - nodeapp
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'mysqladmin',
+          'ping',
+          '-h',
+          'localhost',
+          '-u',
+          'root',
+          '-p$$MYSQL_ROOT_PASSWORD',
+        ]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
+
+networks:
+  nodeapp:
+    driver: bridge
