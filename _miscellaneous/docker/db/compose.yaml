@@ -1,0 +1,25 @@
+services:
+  db:
+    container_name: db
+    image: mariadb:latest
+    restart: always
+    tty: true
+    volumes:
+      - ./data:/var/lib/mysql:Z
+    ports:
+      - '3316:3306'
+    environment:
+      MARIADB_DATABASE: app
+      MARIADB_ROOT_PASSWORD: app
+    networks:
+      - app
+    healthcheck:
+      test: ['CMD', 'healthcheck.sh', '--connect', '--innodb_initialized']
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+networks:
+  app:
+    driver: bridge
