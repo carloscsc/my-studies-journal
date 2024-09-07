@@ -79,5 +79,3 @@ After finishing, only the selected folder will be cloned. However, the structure
 - [Day 2: Password Generator [repo]](./day2-password-generator/README.md) | [[see in action]](https://my-study-journal.vercel.app/day2-password-generator): A simple password generator using Vanilla JS, created to study the basics of arrays, functions, random numbers, and DOM manipulation.
 
 - [Day 3: Unit Converter [repo]](./day3-unit-converter/README.md) | [[see in action]](https://my-study-journal.vercel.app/day3-unit-converter/dist) A unit conversion application, similar to the one embedded in Google Search.
-
-https://roadmap.sh/projects/unit-converter
