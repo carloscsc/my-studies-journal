@@ -7,7 +7,6 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-
 [[SEE IN ACTION]](https://my-study-journal.vercel.app/day3-unit-converter/dist/)
 
 ![img.png](img.png)
@@ -95,3 +94,8 @@ Studies projects, drafts, etc.. are localized on [\_studies](./_studies) folder
 ## About the Dist Folder
 
 In this project, the `dist` folder was included directly in the main `main` branch of the repository, which is generally not a good practice. Ideally, it should be separated into a dedicated production branch, and the `dist` folder should be ignored in the repository's `.gitignore` file. The reason for following this anti-pattern here is that this is a subfolder of a main repository hosted entirely on Vercel. This is the simplest way (that I know of for now) to deploy all the projects in the repository simultaneously without additional configuration. Since these projects are meant for learning and not production, the deployment doesn't need to be more sophisticated or technical. Keeping it simple is often the best approach. (in most cases)
+
+## Roadmap.sh Projects
+
+I also submit this project to [Roadmap.sh Projects](https://roadmap.sh/projects/unit-converter) if you are interested
+you can see other solution and projects there.
