@@ -1,5 +1,7 @@
 // [[Prototype]] - https://javascript.info/prototype-inheritance
 
+// This is not recommended way to create inheritance, its not standard
+
 let animal = {
   eats: true,
   walk() {
