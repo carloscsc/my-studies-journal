@@ -2,7 +2,6 @@
 // Map is case insensitive
 // Watch later: https://www.youtube.com/watch?v=4UqSqF4foy4
 
-
 // create a map
 const map = new Map();
 
