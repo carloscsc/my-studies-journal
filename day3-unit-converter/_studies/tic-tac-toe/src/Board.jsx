@@ -14,8 +14,9 @@ function calculateWinner(squares) {
 
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
+
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+      return { player: squares[a], squares: [a, b, c] };
     }
   }
 
@@ -41,7 +42,7 @@ function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
-    status = "Winner: " + winner;
+    status = "Winner: " + winner.player;
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
@@ -60,6 +61,7 @@ function Board({ xIsNext, squares, onPlay }) {
               <Square
                 key={squareIndex}
                 value={squares[squareIndex]}
+                winner={winner && winner.squares.includes(squareIndex)}
                 onSquareClick={() => handleClick(squareIndex, colIndex + 1, rowIndex + 1)}
               />
             );
