@@ -6,6 +6,7 @@ export default function Game() {
   const [currentMove, setCurrentMove] = useState(0);
 
   const currentSquares = history[currentMove].hist[currentMove];
+  const [isReversed, setIsReversed] = useState(false);
 
   const xIsNext = currentMove % 2 === 0;
 
@@ -28,19 +29,18 @@ export default function Game() {
     setHistory(history.slice(0, nextMove + 1));
   }
 
-  const moves = history.map((squares, move) => {
-    let description;
-    if (move > 0) {
-      description = `Go to move #${move} (L:${squares.line} x C:${squares.col})`;
-    } else {
-      description = "Go to game start";
-    }
-    return (
-      <li key={move}>
-        {currentMove === move ? <p>{description}</p> : <button onClick={() => jumpTo(move)}>{description}</button>}
-      </li>
-    );
-  });
+  const RenderMoves = () => {
+    const moves = isReversed ? history.slice().reverse() : history;
+    return moves.map((step, index) => {
+      const move = isReversed ? history.length - 1 - index : index;
+      const desc = move ? `Go to move #${move} (L:${step.line} x C:${step.col})` : "Go to game start";
+      return (
+        <li key={move}>
+          <button onClick={() => jumpTo(move)}>{desc}</button>
+        </li>
+      );
+    });
+  };
 
   return (
     <div className="game">
@@ -49,7 +49,10 @@ export default function Game() {
       </div>
 
       <div className="game-info">
-        <ol>{moves}</ol>
+        <button onClick={() => setIsReversed(!isReversed)}>Reverse</button>
+        <ol reversed={isReversed}>
+          <RenderMoves />
+        </ol>
       </div>
     </div>
   );
