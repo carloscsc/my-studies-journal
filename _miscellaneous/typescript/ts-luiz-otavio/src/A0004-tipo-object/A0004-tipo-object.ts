@@ -1,13 +1,18 @@
-const A: {
-  chaveA: string;
+const objetoA: {
+  readonly chaveA: string;
   chaveB: string;
-  readonly [key: string]: string; // generic object
+  chaveC?: string;
+  [key: string]: unknown;
 } = {
   chaveA: 'Valor A',
   chaveB: 'Valor B',
 };
 
-A.chaveC = 'Nova chave';
+objetoA.chaveB = 'Outro valor';
+objetoA.chaveC = 'Novo valor';
+objetoA.chaveD = 'Nova chave';
 
-console.log(A.chaveA);
-console.log(A.chaveC);
+console.log(objetoA);
+
+// Module mode
+export default 1;

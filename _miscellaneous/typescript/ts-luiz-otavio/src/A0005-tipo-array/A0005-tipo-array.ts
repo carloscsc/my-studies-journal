@@ -1,14 +1,20 @@
-// Array<T> = T[];
-
+// Array<T> - T[]
 export function multiplicaArgs(...args: Array<number>): number {
-  return args.reduce((acc, valor) => acc * valor, 1);
+  return args.reduce((ac, valor) => ac * valor, 1);
 }
 
-const concatenaStrings = (...args: string[]): string =>
-  args.reduce((acc, valor) => acc + valor, '');
+export function concatenaString(...args: string[]): string {
+  return args.reduce((ac, valor) => ac + valor);
+}
 
-const result = multiplicaArgs(1, 2, 3, 4, 5, 6); //?
+export function toUpperCase(...args: string[]): string[] {
+  return args.map((valor) => valor.toUpperCase());
+}
+
+const result = multiplicaArgs(1, 2, 3);
+const concatenacao = concatenaString('a', 'b', 'c');
+const upper = toUpperCase('a', 'b', 'c');
+
 console.log(result);
-
-const result2 = concatenaStrings('a', 'b', 'c', 'd', 'e', 'f'); //?
-console.log(result2);
+console.log(concatenacao);
+console.log(upper);

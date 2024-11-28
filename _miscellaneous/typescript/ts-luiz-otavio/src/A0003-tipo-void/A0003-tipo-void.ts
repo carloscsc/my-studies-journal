@@ -1,5 +1,5 @@
-function semRetorno(name: string, ...abc: unknown[]): void {
-  console.log(name + ' e ' + abc.join(' '));
+function semRetorno(...args: string[]): void {
+  console.log(args.join(' '));
 }
 
 const pessoa = {
@@ -11,7 +11,7 @@ const pessoa = {
   },
 };
 
-semRetorno('carlos', 'Luiz', 'Otávio', 33, ' anos de idade');
+semRetorno('Luiz', 'Otávio');
 pessoa.exibirNome();
 
 export { pessoa };
